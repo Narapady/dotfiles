@@ -1,0 +1,15 @@
+gui:
+  showIcons: true
+  sidePanelWidth: 0.2
+  theme:
+    lightTheme: false
+    selectedLineBgColor:
+      - "#9d7cd8"
+    activeBorderColor:
+      - "#859900"
+    inactiveBorderColor:
+      - "#268bd2"
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never

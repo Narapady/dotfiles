@@ -1,0 +1,7 @@
+vim.keymap.set("i", "jj", "<ESC>", { silent = true })
+vim.keymap.set("n", ">", "$", { silent = true })
+vim.keymap.set("n", "<", "_", { silent = true })
+vim.keymap.set("n", "<leader>w", ":w<CR>", { silent = true })
+vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true })
+vim.keymap.set("n", "<C-u>", ":u<CR>", { silent = true })
+vim.keymap.set("n", "<leader>rn", ":IncRename ", { silent = true })
