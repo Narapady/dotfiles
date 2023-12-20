@@ -3,7 +3,6 @@ return {
   {
 
     { "xiyaowong/transparent.nvim" }, --transparent window
-    { "christoomey/vim-tmux-navigator" }, -- use vim key binding to move b/w tmux panes
     {
       "folke/noice.nvim",
       opts = function(_, opts)

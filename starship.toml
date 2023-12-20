@@ -11,7 +11,7 @@ $git_state\
 $git_status\
 $python\
 $git_metrics\
-$cmd_duration $jobs $time\
+$cmd_duration $jobs\ 
 $line_break\
 $memory_usage\
 [➜ ](bold green)"""
@@ -21,12 +21,6 @@ continuation_prompt = '▶▶ '
 [character]
 success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 error_symbol = '[➜](bold red)'
-
-[time]
-disabled = false
-time_format = "%r" # Hour:Minute Format
-style = "bg:#1d2230"
-format = '[[ 󱑍 $time ](bg:#1C3A5E fg:#8DFBD2)]($style)'
 
 # Replace the '❯' symbol in the prompt with '➜'
 

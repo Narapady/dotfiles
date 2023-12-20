@@ -1,3 +1,4 @@
+--
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 
@@ -14,15 +15,22 @@ end
 
 -- For example, changing the color scheme:
 config.color_scheme = "Solarized Dark - Patched"
-config.color_schemes = {
-	["Solarized Dark - Patched"] = {
-		background = "#04141C",
-	},
-}
+-- config.color_schemes = {
+-- 	["Solarized Dark Higher Contrast (Gogh)"] = {
+-- 		background = "#04141C",
+-- 	},
+-- }
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 60
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
-config.font_size = 15
+config.font_size = 16
+
+config.window_padding = {
+	left = 30,
+	right = 30,
+	top = 20,
+	bottom = 10,
+}
 -- and finally, return the configuration to wezterm
 return config
