@@ -1,7 +1,5 @@
 return {
-
   {
-
     { "xiyaowong/transparent.nvim" }, --transparent window
     {
       "folke/noice.nvim",
@@ -53,20 +51,6 @@ return {
         })
 
         opts.presets.lsp_doc_border = true
-      end,
-    },
-    {
-      "nvim-lualine/lualine.nvim",
-      optional = true,
-      opts = function(_, opts)
-        table.insert(opts.sections.lualine_c, {
-          function()
-            return require("nvim-navic").get_location()
-          end,
-          cond = function()
-            return package.loaded["nvim-navic"] and require("nvim-navic").is_available()
-          end,
-        })
       end,
     },
   },

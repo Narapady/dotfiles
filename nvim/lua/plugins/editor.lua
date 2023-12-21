@@ -85,6 +85,7 @@ return {
       local actions = require("telescope.actions")
       local fb_actions = require("telescope").extensions.file_browser.actions
 
+      -- TODO: ctr + j to move to next selection in find file
       opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
         wrap_results = true,
         layout_strategy = "horizontal",
@@ -93,6 +94,10 @@ return {
         winblend = 0,
         mappings = {
           n = {},
+          i = {
+            ["<C-j>"] = actions.move_selection_next,
+            ["<C-k>"] = actions.move_selection_previous,
+          },
         },
       })
       opts.pickers = {

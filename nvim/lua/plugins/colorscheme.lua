@@ -13,10 +13,4 @@ return {
       }
     end,
   },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "solarized-osaka",
-    },
-  },
 }
