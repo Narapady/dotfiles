@@ -53,4 +53,10 @@ return {
       })
     end,
   },
+  -- show color on Hex color code
+  {
+    "NvChad/nvim-colorizer.lua",
+    event = { "BufReadPre", "BufNewFile" },
+    config = true,
+  },
 }

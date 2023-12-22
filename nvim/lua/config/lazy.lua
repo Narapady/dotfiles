@@ -15,7 +15,6 @@ require("lazy").setup({
     { import = "plugins" },
     -- load plugins from the extras provided by lazyVim
     { import = "lazyvim.plugins.extras.formatting.black" },
-    { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.lang.python" },
   },
