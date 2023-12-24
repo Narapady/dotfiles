@@ -9,6 +9,9 @@ return {
         styles = {
           sidebars = "transparent",
           floats = "transparent",
+          comments = { italic = true },
+          keywords = { italic = true },
+          functions = { italic = true },
         },
       }
     end,
