@@ -81,5 +81,36 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim",
     },
+    keys = {
+      {
+        "<leader>a",
+        function()
+          require("chatgpt").openChat()
+        end,
+        desc = "ChatGPT",
+        mode = {
+          "n",
+          "v",
+        },
+      },
+      {
+        "<leader>ai",
+        function()
+          require("chatgpt").edit_with_instructions()
+        end,
+        desc = "ChatGPT Edit With Instruction",
+        mode = {
+          "n",
+          "v",
+        },
+      },
+      {
+        "<leader>ax",
+        function()
+          require("chatgpt").run_action()
+        end,
+        desc = "ChatGPT Run",
+      },
+    },
   },
 }
