@@ -22,7 +22,7 @@ config.color_scheme = "Tokyo Night (Gogh)"
 -- }
 
 -- dim the brightness of the background image
-local dimmer = { brightness = 0.4 }
+local dimmer = { brightness = 0.7 }
 config.background = {
 	{
 		source = {
