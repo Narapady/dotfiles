@@ -22,13 +22,13 @@ config.color_scheme = "Tokyo Night (Gogh)"
 -- }
 
 -- dim the brightness of the background image
-local dimmer = { brightness = 0.7 }
+local dimmer = { brightness = 0.1 }
 config.background = {
 	{
 		source = {
 			File = {
-				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Robot Alley by Kirokaze.gif",
-				speed = 0.05,
+				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Isolated Incident by kirokaze.gif",
+				speed = 0.2,
 			},
 		},
 		hsb = dimmer,

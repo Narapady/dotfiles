@@ -20,7 +20,7 @@ return {
     },
   },
 
-  -- dashboard
+  -- change starting dashboard
   {
     "nvimdev/dashboard-nvim",
     event = "VimEnter",

@@ -1,7 +1,7 @@
 -- for displaying diagnostics in the statusline
 local function get_diagnostic_label(props)
   local icons = {
-    Error = " ",
+    Error = " ",
     Warn = " ",
     Info = " ",
     Hint = "󰛨 ",
@@ -18,10 +18,9 @@ local function get_diagnostic_label(props)
   end
   return label
 end
-
 -- for displaying git sign
 local function get_git_diff(props)
-  local icons = { removed = "", changed = "", added = "" }
+  local icons = { removed = " ", changed = "󱩽 ", added = " " }
   local labels = {}
   local signs = vim.api.nvim_buf_get_var(props.buf, "gitsigns_status_dict")
   -- local signs = vim.b.gitsigns_status_dict
@@ -35,7 +34,6 @@ local function get_git_diff(props)
   end
   return labels
 end
-
 return {
   "b0o/incline.nvim",
   event = "BufReadPre",
@@ -46,8 +44,11 @@ return {
       render = function(props)
         local bufname = vim.api.nvim_buf_get_name(props.buf)
         local filename = vim.fn.fnamemodify(bufname, ":t")
+        if vim.bo[props.buf].modified then
+          filename = filename .. " [+]"
+        end
         local diagnostics = get_diagnostic_label(props)
-        local modified = vim.api.nvim_buf_get_option(props.buf, "modified") and "bold,italic" or "None"
+        local modified = vim.api.nvim_buf_get_option(props.buf, "modified") and "bold" or "None"
         local filetype_icon, color = require("nvim-web-devicons").get_icon_color(filename)
 
         local buffer = {
