@@ -30,7 +30,7 @@ config.window_padding = {
 	left = 30,
 	right = 30,
 	top = 20,
-	bottom = 10,
+	bottom = 20,
 }
 -- and finally, return the configuration to wezterm
 return config
