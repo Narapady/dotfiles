@@ -2,16 +2,10 @@ return {
   -- multi-select, keymap: ctrl-n
   { "mg979/vim-visual-multi" },
 
-  -- rename variable -recursively
-  {
-    "smjonas/inc-rename.nvim",
-    cmd = "IncRename",
-    config = true,
-  },
-
   -- preview definition/references
   {
     "rmagatti/goto-preview",
+    event = "VeryLazy",
     config = function()
       require("goto-preview").setup()
     end,
@@ -24,6 +18,7 @@ return {
   -- note taking
   {
     "nvim-neorg/neorg",
+    event = "BufReadPre",
     build = ":Neorg sync-parsers",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
@@ -42,6 +37,7 @@ return {
       })
     end,
   },
+
   -- show color on Hex color code
   {
     "NvChad/nvim-colorizer.lua",
