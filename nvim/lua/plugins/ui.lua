@@ -2,6 +2,16 @@ return {
   --transparent window
   { "xiyaowong/transparent.nvim" },
 
+  -- -- config notify.nvim
+  {
+    "rcarriga/nvim-notify",
+    event = "BufRead",
+    config = function()
+      require("notify").setup({
+        background_colour = "#000000",
+      })
+    end,
+  },
   -- hide taps
   {
     "akinsho/bufferline.nvim",
