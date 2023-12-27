@@ -14,7 +14,7 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = "Tokyo Night (Gogh)"
+config.color_scheme = "Solarized Dark - Patched"
 -- config.color_schemes = {
 -- 	["Solarized Dark - Patched"] = {
 -- 		background = "#04141C",
