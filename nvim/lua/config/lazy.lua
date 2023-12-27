@@ -14,10 +14,12 @@ require("lazy").setup({
     -- load plugins from the plugins folder
     { import = "plugins" },
     -- load plugins from the extras provided by lazyVim
-    { import = "lazyvim.plugins.extras.formatting.black" },
-    { import = "lazyvim.plugins.extras.dap.core" },
-    { import = "lazyvim.plugins.extras.lang.python" },
-    { import = "lazyvim.plugins.extras.test.core" },
+    { import = "lazyvim.plugins.extras.formatting.black" }, -- formatting
+    { import = "lazyvim.plugins.extras.dap.core" }, -- debugger
+    { import = "lazyvim.plugins.extras.lang.python" }, -- pyright, ruff_lsp
+    { import = "lazyvim.plugins.extras.lang.python-semshi" }, -- semantic hightlighting
+    { import = "lazyvim.plugins.extras.test.core" }, -- neotest
+    { import = "lazyvim.plugins.extras.coding.yanky" }, -- improve yanky in neovim
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.

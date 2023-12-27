@@ -1,6 +1,4 @@
 return {
-  -- fix indent for python
-  { "Vimjas/vim-python-pep8-indent" },
   -- multi-select, keymap: ctrl-n
   { "mg979/vim-visual-multi" },
 

@@ -83,7 +83,7 @@ return {
     },
     keys = {
       {
-        "<leader>a",
+        "<leader><space>",
         function()
           require("chatgpt").openChat()
         end,
@@ -94,7 +94,7 @@ return {
         },
       },
       {
-        "<leader>ai",
+        "<leader>i",
         function()
           require("chatgpt").edit_with_instructions()
         end,
@@ -103,13 +103,6 @@ return {
           "n",
           "v",
         },
-      },
-      {
-        "<leader>ax",
-        function()
-          require("chatgpt").run_action()
-        end,
-        desc = "ChatGPT Run",
       },
     },
   },
