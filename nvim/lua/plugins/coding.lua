@@ -21,16 +21,6 @@ return {
     "HiPhish/nvim-ts-rainbow2",
   },
 
-  -- file code symbole outline
-  {
-    "simrat39/symbols-outline.nvim",
-    keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
-    cmd = "SymbolsOutline",
-    opts = {
-      position = "right",
-    },
-  },
-
   -- note taking
   {
     "nvim-neorg/neorg",

@@ -14,16 +14,30 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = "Solarized Dark - Patched"
-config.color_schemes = {
-	["Solarized Dark - Patched"] = {
-		background = "#04141C",
+config.color_scheme = "Tokyo Night (Gogh)"
+-- config.color_schemes = {
+-- 	["Solarized Dark - Patched"] = {
+-- 		background = "#04141C",
+-- 	},
+-- }
+
+-- dim the brightness of the background image
+local dimmer = { brightness = 0.4 }
+config.background = {
+	{
+		source = {
+			File = {
+				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Robot Alley by Kirokaze.gif",
+				speed = 0.05,
+			},
+		},
+		hsb = dimmer,
 	},
 }
-config.window_background_opacity = 0.8
+config.window_decorations = "RESIZE"
+config.window_background_opacity = 0.9
 config.macos_window_background_blur = 60
 config.enable_tab_bar = false
-config.window_decorations = "RESIZE"
 config.font_size = 16
 
 config.window_padding = {

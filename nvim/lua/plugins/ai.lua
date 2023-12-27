@@ -36,6 +36,7 @@ return {
   -- copilot status in lualine
   -- this is taken from the copilot lazyvim extras at:
   -- https://www.lazyvim.org/plugins/extras/coding.copilot
+  --
   {
     "nvim-lualine/lualine.nvim",
     optional = true,
