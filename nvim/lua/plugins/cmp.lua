@@ -16,15 +16,24 @@ return {
 
       local luasnip = require("luasnip")
       local cmp = require("cmp")
-
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
-        ["<CR>"] = vim.NIL,
-        -- map tab to
+        -- Enter to accept copilot suggesion
+        ["<CR>"] = cmp.mapping(function(fallback)
+          local copilot_status_ok, copilot = pcall(require, "copilot")
+          if copilot_status_ok then
+            if require("copilot.suggestion").is_visible() then
+              require("copilot.suggestion").accept()
+            else
+              fallback()
+            end
+          else
+            fallback()
+          end
+        end, { "i", "s" }),
+        -- Tab to accept code completion
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true })
-          elseif require("copilot.suggestion").is_visible() then
-            require("copilot.suggestion").accept()
           elseif luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
           elseif has_words_before() then

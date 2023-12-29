@@ -33,6 +33,7 @@ return {
       end
     end,
   },
+  -- chatgpt plugins
   {
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
