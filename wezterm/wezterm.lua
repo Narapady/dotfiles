@@ -11,40 +11,45 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- This is where you actually apply your config choices
-
--- For example, changing the color scheme:
+-- font
+config.font = wezterm.font("Hack")
+-- font size
+config.font_size = 16
+-- colorscheme
 config.color_scheme = "Solarized Dark - Patched"
--- config.color_schemes = {
--- 	["Solarized Dark - Patched"] = {
--- 		background = "#04141C",
--- 	},
--- }
 
 -- dim the brightness of the background image
 local dimmer = { brightness = 0.1 }
+-- background image
 config.background = {
 	{
 		source = {
 			File = {
-				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Isolated Incident by kirokaze.gif",
+				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Dark Glow by Matthew Butler.gif",
 				speed = 0.2,
 			},
 		},
 		hsb = dimmer,
+		vertical_align = "Middle",
+		opacity = 0.85,
+		height = "Cover",
+		width = "Cover",
 	},
 }
+-- high window bar
 config.window_decorations = "RESIZE"
+-- window background opacity
 config.window_background_opacity = 0.9
+-- window background blur
 config.macos_window_background_blur = 60
+-- no tab bar
 config.enable_tab_bar = false
-config.font_size = 16
-
+-- window padding
 config.window_padding = {
 	left = 30,
 	right = 30,
 	top = 20,
 	bottom = 20,
 }
--- and finally, return the configuration to wezterm
+-- return the configuration to wezterm
 return config
