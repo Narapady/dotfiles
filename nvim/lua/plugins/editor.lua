@@ -20,7 +20,6 @@ return {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
       },
-      "nvim-telescope/telescope-file-browser.nvim",
     },
     keys = {
       -- list of disabled defualt keymaps
@@ -72,34 +71,11 @@ return {
         end,
         desc = "Lists Function names, variables, from Treesitter",
       },
-      {
-        "lf",
-        function()
-          local telescope = require("telescope")
-
-          local function telescope_buffer_dir()
-            return vim.fn.expand("%:p:h")
-          end
-
-          telescope.extensions.file_browser.file_browser({
-            path = "%:p:h",
-            cwd = telescope_buffer_dir(),
-            respect_gitignore = false,
-            hidden = true,
-            grouped = true,
-            previewer = true,
-            initial_mode = "normal",
-          })
-        end,
-        desc = "Open File Browser with the path of the current buffer",
-      },
     },
     config = function(_, opts)
       local telescope = require("telescope")
       local actions = require("telescope.actions")
-      local fb_actions = require("telescope").extensions.file_browser.actions
 
-      -- TODO: ctr + j to move to next selection in find file
       opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
         wrap_results = true,
         layout_strategy = "horizontal",
@@ -123,29 +99,8 @@ return {
           },
         },
       }
-      opts.extensions = {
-        file_browser = {
-          -- disables netrw and use telescope-file-browser in its place
-          hijack_netrw = true,
-          mappings = {
-            -- your custom insert mode mappings
-            ["n"] = {
-              -- make it lf-liked keymaps
-              ["a"] = fb_actions.create,
-              ["d"] = fb_actions.remove,
-              ["r"] = fb_actions.rename,
-              ["h"] = fb_actions.goto_parent_dir,
-              ["l"] = fb_actions.change_cwd,
-              ["H"] = fb_actions.toggle_hidden,
-              ["<PageUp>"] = actions.preview_scrolling_up,
-              ["<PageDown>"] = actions.preview_scrolling_down,
-            },
-          },
-        },
-      }
       telescope.setup(opts)
       require("telescope").load_extension("fzf")
-      require("telescope").load_extension("file_browser")
     end,
   },
 }
