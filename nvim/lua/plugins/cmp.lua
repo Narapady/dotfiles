@@ -4,6 +4,10 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-emoji",
+      "hrsh7th/cmp-buffer",
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
+      "onsails/lspkind-nvim",
       opts = nil,
     },
     ---@param opts cmp.ConfigSchema
@@ -13,7 +17,6 @@ return {
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
         return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
       end
-
       local luasnip = require("luasnip")
       local cmp = require("cmp")
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
