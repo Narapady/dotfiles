@@ -13,6 +13,7 @@ return {
   -- color brackets
   {
     "HiPhish/nvim-ts-rainbow2",
+    event = "BufReadPre",
   },
 
   -- note taking

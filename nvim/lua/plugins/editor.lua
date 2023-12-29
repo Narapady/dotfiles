@@ -28,6 +28,7 @@ return {
       { "<leader>ff", false }, -- disable find_file keymap
       { "<leader>fb", false }, -- disble buffers keymap
       { "<leader>sd", false }, -- disble show diagnostics keymap
+
       --  opened buffers
       {
         ";b",
@@ -35,6 +36,15 @@ return {
           local builtin = require("telescope.builtin")
           builtin.buffers()
         end,
+        desc = "Lists opened buffers",
+      },
+      {
+        ";ff",
+        function()
+          local builtin = require("telescope.builtin")
+          builtin.current_buffer_fuzzy_find()
+        end,
+        desc = "Live fuzzy search inside of the currently open buffer",
       },
       {
         ";f",
@@ -78,7 +88,7 @@ return {
 
       opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
         wrap_results = true,
-        layout_strategy = "horizontal",
+        layout_strategy = "vertical",
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
