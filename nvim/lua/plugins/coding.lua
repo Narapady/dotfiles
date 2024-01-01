@@ -5,7 +5,7 @@ return {
   -- preview definition/references
   {
     "rmagatti/goto-preview",
-    event = "VeryLazy",
+    event = "BufReadPre",
     config = function()
       require("goto-preview").setup()
     end,

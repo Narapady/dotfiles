@@ -74,12 +74,20 @@ return {
         desc = "Lists Diagnostics for all open buffers or a specific buffer",
       },
       {
-        ";s",
+        ";t",
         function()
           local builtin = require("telescope.builtin")
           builtin.treesitter()
         end,
         desc = "Lists Function names, variables, from Treesitter",
+      },
+      {
+        ";s",
+        function()
+          local builtin = require("telescope.builtin")
+          builtin.grep_string()
+        end,
+        desc = "Find string under cursor",
       },
     },
     config = function(_, opts)
@@ -88,7 +96,7 @@ return {
 
       opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
         wrap_results = true,
-        layout_strategy = "vertical",
+        layout_strategy = "horizontal",
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
@@ -102,7 +110,7 @@ return {
       })
       opts.pickers = {
         diagnostics = {
-          theme = "ivy",
+          theme = "dropdown",
           initial_mode = "normal",
           layout_config = {
             preview_cutoff = 9999,

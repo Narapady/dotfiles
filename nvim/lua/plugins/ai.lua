@@ -49,6 +49,11 @@ return {
     },
     keys = {
       {
+        "<C-x>",
+        "<cmd>ChatGPTRun explain_code<CR>",
+        mode = "v",
+      },
+      {
         "<leader><space>",
         function()
           require("chatgpt").openChat()
