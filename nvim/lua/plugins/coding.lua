@@ -1,6 +1,6 @@
 return {
   -- multi-select, keymap: ctrl-n
-  { "mg979/vim-visual-multi" },
+  { "mg979/vim-visual-multi", event = "BufReadPre" },
 
   -- preview definition/references
   {

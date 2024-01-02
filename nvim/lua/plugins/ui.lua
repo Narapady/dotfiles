@@ -29,15 +29,19 @@ return {
       },
     },
   },
+
+  -- lsp saga
+  -- only use breadcrumb feature
   {
     "nvimdev/lspsaga.nvim",
+    event = "BufReadPre",
     config = function()
       require("lspsaga").setup({
         symbol_in_winbar = {
           show_file = false,
         },
         ui = {
-          code_action = "",
+          code_action = "", -- disable lightbulb
         },
       })
     end,

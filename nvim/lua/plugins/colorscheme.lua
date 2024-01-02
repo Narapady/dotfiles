@@ -48,22 +48,29 @@ return {
       })
     end,
   },
+  -- tokyonight
   {
     "folke/tokyonight.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+        comments = { italic = true },
+        keywords = { italic = true },
+        functions = { italic = true },
+      },
+    },
+  },
+  -- nightfly
+  {
+    "bluz71/vim-nightfly-colors",
+    name = "nightfly",
     lazy = true,
-    name = "tokyonight",
-    opts = function()
-      return {
-        transparent = true,
-        styles = {
-          sidebars = "transparent",
-          floats = "transparent",
-          comments = { italic = true },
-          keywords = { italic = true },
-          functions = { italic = true },
-        },
-        semantic_tokens = true,
-      }
+    priority = 1000,
+    config = function()
+      vim.g.nightflyTransparent = true
+      vim.g.nightflyNormalFloat = true
     end,
   },
   {

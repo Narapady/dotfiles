@@ -18,6 +18,7 @@ local function get_diagnostic_label(props)
   end
   return label
 end
+
 -- for displaying git sign
 local function get_git_diff(props)
   local icons = { removed = " ", changed = "󱩽 ", added = " " }
@@ -45,7 +46,7 @@ return {
         local bufname = vim.api.nvim_buf_get_name(props.buf)
         local filename = vim.fn.fnamemodify(bufname, ":t")
         if vim.bo[props.buf].modified then
-          filename = filename .. " [+]"
+          filename = "● " .. filename
         end
         local diagnostics = get_diagnostic_label(props)
         local modified = vim.api.nvim_buf_get_option(props.buf, "modified") and "bold" or "None"
