@@ -4,3 +4,4 @@
 
 -- hide neovim statusline
 vim.opt.laststatus = 0
+vim.opt.relativenumber = false

@@ -22,7 +22,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.coding.yanky" }, -- improve yanky in neovim
   },
   defaults = {
-    -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
     lazy = false,
     version = false, -- always use the latest git commit
   },
