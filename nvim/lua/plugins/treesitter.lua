@@ -10,8 +10,13 @@ return {
         "css",
         "fish",
         "gitignore",
+        "markdown",
+        "markdown_inline",
         "rust",
         "sql",
+      },
+      highlight = {
+        enable = true,
       },
       rainbow = {
         enable = true,
