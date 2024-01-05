@@ -1,6 +1,6 @@
 return {
   --transparent window
-  { "xiyaowong/transparent.nvim" },
+  { "xiyaowong/transparent.nvim", keys = { "<leader>T", "<cmd>TransparentToggle<CR>", desc = "Toggle Transparent" } },
 
   -- -- config notify.nvim
   {
@@ -35,6 +35,9 @@ return {
   {
     "nvimdev/lspsaga.nvim",
     event = "BufReadPre",
+    keys = {
+      { "<leader>ol", "<cmd>Lspsaga outline<CR>", desc = "Show Outline" },
+    },
     config = function()
       require("lspsaga").setup({
         symbol_in_winbar = {

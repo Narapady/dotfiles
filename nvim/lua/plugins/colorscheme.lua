@@ -11,7 +11,9 @@ return {
           floats = "transparent",
           comments = { italic = true },
           keywords = { italic = true },
-          functions = { italic = true },
+          conditionals = { italic = true },
+          loops = { italic = true },
+          -- functions = { italic = true },
         },
         semantic_tokens = true,
       }
@@ -73,10 +75,51 @@ return {
       vim.g.nightflyNormalFloat = true
     end,
   },
+  -- Grovbox
+  {
+    "sainnhe/gruvbox-material",
+    lazy = true,
+    priority = 1000,
+  },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    lazy = true,
+    priority = 1000,
+    config = function()
+      require("rose-pine").setup({
+        disable_background = true,
+        disable_float_background = true,
+      })
+    end,
+  },
+
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = true,
+    priority = 1000,
+    config = function()
+      require("kanagawa").setup({
+        overrides = function(colors)
+          local theme = colors.theme
+          return {
+            TelescopeTitle = { fg = theme.ui.special, bold = true },
+            TelescopePromptNormal = { bg = theme.ui.bg_p1 },
+            TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
+            TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m1 },
+            TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
+            TelescopePreviewNormal = { bg = theme.ui.bg_dim },
+            TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
+          }
+        end,
+      })
+    end,
+  },
+
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "solarized-osaka",
+      colorscheme = "rose-pine",
     },
   },
 }

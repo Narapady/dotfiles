@@ -22,11 +22,11 @@ return {
       opts.desc = "Show LSP references"
       keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
-      opts.desc = "Go to declaration"
-      keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
-
       opts.desc = "Show LSP definitions"
       keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
+
+      opts.desc = "Peek Definiton"
+      keymap.set("n", "gh", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts) -- show documentation for what is under cursor
 
       opts.desc = "Show LSP implementations"
       keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
@@ -50,7 +50,7 @@ return {
       keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
 
       opts.desc = "Show documentation for what is under cursor"
-      keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+      keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
 
       opts.desc = "Restart LSP"
       keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
@@ -83,6 +83,12 @@ return {
 
     -- configure python ruff-lsp server
     lspconfig["ruff_lsp"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    -- configure python ruff-lsp server
+    lspconfig["grammarly"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })

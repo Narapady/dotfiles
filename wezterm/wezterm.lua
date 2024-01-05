@@ -1,4 +1,3 @@
---
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 
@@ -25,7 +24,7 @@ config.background = {
 	{
 		source = {
 			File = {
-				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Dark Glow by Matthew Butler.gif",
+				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Erica Anderson.gif",
 				speed = 0.2,
 			},
 		},
