@@ -15,40 +15,39 @@ config.font = wezterm.font("Hack")
 -- font size
 config.font_size = 16
 -- colorscheme
-config.color_scheme = "Solarized Dark - Patched"
+config.color_scheme = "Rosé Pine (Gogh)"
 
 -- dim the brightness of the background image
-local dimmer = { brightness = 0.1 }
 -- background image
-config.background = {
-	{
-		source = {
-			File = {
-				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Erica Anderson.gif",
-				speed = 0.2,
-			},
-		},
-		hsb = dimmer,
-		vertical_align = "Middle",
-		opacity = 0.85,
-		height = "Cover",
-		width = "Cover",
-	},
-}
--- high window bar
+-- config.background = {
+-- 	{
+-- 		source = {
+-- 			File = {
+-- 				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Flower.jpeg",
+-- 				speed = 0.2,
+-- 			},
+-- 		},
+-- 		hsb = { brightness = 0.1 },
+-- 		vertical_align = "Middle",
+-- 		opacity = 0.9,
+-- 		height = "Cover",
+-- 		width = "Cover",
+-- 	},
+-- }
+-- high window baggVGnr
 config.window_decorations = "RESIZE"
 -- window background opacity
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.7
 -- window background blur
-config.macos_window_background_blur = 60
+config.macos_window_background_blur = 50
 -- no tab bar
 config.enable_tab_bar = false
 -- window padding
 config.window_padding = {
-	left = 30,
-	right = 30,
-	top = 20,
-	bottom = 20,
+	left = 10,
+	right = 10,
+	top = 10,
+	bottom = 10,
 }
 -- return the configuration to wezterm
 return config

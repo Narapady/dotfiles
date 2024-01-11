@@ -5,22 +5,22 @@ add_newline = false
 command_timeout = 1000
 
 format = """
-$directory$character"""
-
-right_format = """
+$directory\
 $git_branch\
 $git_state\
 $git_status\
 $python\
 $git_metrics\
 $cmd_duration $jobs\
+$line_break\
+$character\
 """
 
 continuation_prompt = '▶▶ '
 
 [character]
-success_symbol = '[󰳟 ](bold green)'
-error_symbol = '[󰳟 ](bold red)'
+success_symbol = '[](bold green)'
+error_symbol = '[](bold red)'
 
 # Replace the '❯' symbol in the prompt with '➜'
 

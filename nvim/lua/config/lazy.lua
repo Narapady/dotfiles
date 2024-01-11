@@ -17,7 +17,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.formatting.black" }, -- formatting
     { import = "lazyvim.plugins.extras.dap.core" }, -- debugger
     { import = "lazyvim.plugins.extras.lang.python" }, -- pyright, ruff_lsp
-    { import = "lazyvim.plugins.extras.lang.python-semshi" }, -- semantic hightlighting
     { import = "lazyvim.plugins.extras.test.core" }, -- neotest
     { import = "lazyvim.plugins.extras.coding.yanky" }, -- improve yanky in neovim
   },

@@ -14,7 +14,7 @@ tmux:
     deletions: " "
   styles:
     state: "#[fg=#eb6f92,nobold]"
-    branch: "#[fg=#ebbcba,nobold]"
+    branch: "#[fg=#ebbcba,bold]"
     staged: "#[fg=#31748f,nobold]"
     insertions: "#[fg=#9ccfd8,nobold]"
     deletions: "#[fg=#eb6f92,nobold]"

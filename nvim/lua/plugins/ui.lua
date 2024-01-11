@@ -1,8 +1,25 @@
 return {
   --transparent window
-  { "xiyaowong/transparent.nvim", keys = { "<leader>T", "<cmd>TransparentToggle<CR>", desc = "Toggle Transparent" } },
+  {
+    "xiyaowong/transparent.nvim",
+    lazy = false,
+    keys = { "<leader>T", "<cmd>TransparentToggle<CR>", desc = "Toggle Transparent" },
+  },
 
-  -- -- config notify.nvim
+  -- Preview markdown
+  {
+    "toppair/peek.nvim",
+    event = { "VeryLazy" },
+    build = "deno task --quiet build:fast",
+    config = function()
+      require("peek").setup()
+      -- refer to `configuration to change defaults`
+      vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+      vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+    end,
+  },
+
+  -- config notify.nvim
   {
     "rcarriga/nvim-notify",
     event = "BufRead",

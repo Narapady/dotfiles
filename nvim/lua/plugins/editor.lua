@@ -1,17 +1,4 @@
 return {
-  {
-    "dinhhuy258/git.nvim",
-    event = "BufReadPre",
-    opts = {
-      keymaps = {
-        -- Open blame window
-        blame = "<Leader>gb",
-        -- Open file/folder in git repository
-        browse = "<Leader>go",
-      },
-    },
-  },
-
   -- Override default telescope
   {
     "telescope.nvim",
@@ -28,6 +15,7 @@ return {
       { "<leader>ff", false }, -- disable find_file keymap
       { "<leader>fb", false }, -- disble buffers keymap
       { "<leader>sd", false }, -- disble show diagnostics keymap
+      { "<leader>ff", false }, -- disble file files
 
       --  opened buffers
       {
