@@ -7,7 +7,6 @@ return {
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
     "saadparwaiz1/cmp_luasnip",
-    "kristijanhusak/vim-dadbod-completion",
   },
   opts = function()
     vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
@@ -47,7 +46,6 @@ return {
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "path" },
-        { name = "vim-dadbod-completion" },
       }, {
         { name = "buffer" },
       }),

@@ -42,6 +42,8 @@ return {
         "isort", -- python formatter
         "black", -- python formatter
         "pylint", -- python linter
+        "sqlfmt", -- sql formatter
+        "sql-formatter",
       },
     })
   end,
