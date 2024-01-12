@@ -1,113 +1,30 @@
 return {
   "neovim/nvim-lspconfig",
+  init = function()
+    local keys = require("lazyvim.plugins.lsp.keymaps").get()
+    -- change a keymap
+    keys[#keys + 1] = { "K", "<cmd>Lspsaga hover_doc<CR>" }
+    -- add a keymap
+    keys[#keys + 1] = { "gh", "<cmd>Lspsaga peek_definition<CR>" }
+  end,
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/nvim-cmp",
     { "antosha417/nvim-lsp-file-operations", config = true },
   },
-  config = function()
-    -- import lspconfig plugin
-    local lspconfig = require("lspconfig")
-
-    -- import cmp-nvim-lsp plugin
-    local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
-    local keymap = vim.keymap -- for conciseness
-
-    local opts = { noremap = true, silent = true }
-    local on_attach = function(client, bufnr)
-      opts.buffer = bufnr
-
-      -- set keybinds
-      opts.desc = "Show LSP references"
-      keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
-
-      opts.desc = "Show LSP definitions"
-      keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
-
-      opts.desc = "Peek Definiton"
-      keymap.set("n", "gh", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts) -- show documentation for what is under cursor
-
-      opts.desc = "See available code actions"
-      keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
-
-      opts.desc = "Smart rename"
-      keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
-
-      opts.desc = "Show line diagnostics"
-      keymap.set("n", "D", vim.diagnostic.open_float, opts) -- show diagnostics for line
-
-      opts.desc = "Show line diagnostics"
-      keymap.set("n", "gs", vim.lsp.buf.signature_help, opts) -- show diagnostics for line
-
-      opts.desc = "Show documentation for what is under cursor"
-      keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
-
-      opts.desc = "Restart LSP"
-      keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
-    end
-
-    -- used to enable autocompletion (assign to every lsp server config)
-    local capabilities = cmp_nvim_lsp.default_capabilities()
-
-    -- Change the Diagnostic symbols in the sign column (gutter)
-    -- (not in youtube nvim video)
-    local signs = { Error = " ", Warn = " ", Hint = "󰛨 ", Info = " " }
-    for type, icon in pairs(signs) do
-      local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-    end
-
-    -- configure python server
-    lspconfig["pyright"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = {
-        python = {
-          analysis = {
-            typeCheckingMode = "off",
-            diagnosticMode = "off",
-          },
-        },
-      },
-    })
-
-    -- configure python ruff-lsp server
-    lspconfig["ruff_lsp"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    -- configure python ruff-lsp server
-    lspconfig["grammarly"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    -- configure sql server
-    lspconfig["sqlls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-    -- configure lua server (with special settings)
-    lspconfig["lua_ls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = { -- custom settings for lua
-        Lua = {
-          -- make the language server recognize "vim" global
-          diagnostics = {
-            globals = { "vim" },
-          },
-          workspace = {
-            -- make language server aware of runtime files
-            library = {
-              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-              [vim.fn.stdpath("config") .. "/lua"] = true,
+  opts = {
+    servers = {
+      pyright = {
+        settings = {
+          python = {
+            analysis = {
+              typeCheckingMode = "off",
+              diagnosticMode = "off",
             },
           },
         },
       },
-    })
-  end,
+    },
+  },
 }

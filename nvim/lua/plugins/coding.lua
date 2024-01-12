@@ -2,14 +2,6 @@ return {
   -- multi-select, keymap: ctrl-n
   { "mg979/vim-visual-multi", event = "BufReadPre" },
 
-  -- preview definition/references
-  {
-    "rmagatti/goto-preview",
-    event = "BufReadPre",
-    config = function()
-      require("goto-preview").setup()
-    end,
-  },
   -- color brackets
   {
     "HiPhish/nvim-ts-rainbow2",

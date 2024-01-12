@@ -96,7 +96,7 @@ return {
       })
     end,
   },
-
+  -- Kanagawa
   {
     "rebelot/kanagawa.nvim",
     lazy = true,
