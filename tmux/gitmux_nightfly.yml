@@ -1,29 +1,29 @@
 tmux:
   symbols:
-    branch: " "
+    branch: "󰳏 "
     hashprefix: ":"
     ahead: " "
     behind: " "
     staged: " "
     conflict: "󰕚 "
-    modified: "󱩽 "
-    untracked: " "
+    modified: " "
+    untracked: " "
     stashed: " "
     clean: " "
-    insertions: " "
-    deletions: " "
+    insertions: " "
+    deletions: "󰍷 "
   styles:
-    state: "#[fg=#eb6f92,nobold]"
-    branch: "#[fg=#ebbcba,bold]"
-    staged: "#[fg=#31748f,nobold]"
-    insertions: "#[fg=#9ccfd8,nobold]"
-    deletions: "#[fg=#eb6f92,nobold]"
-    conflict: "#[fg=#eb6f92,nobold]"
-    modified: "#[fg=#f6c177,nobold]"
-    untracked: "#[fg=#31748f,nobold]"
-    stashed: "#[fg=#6e6a86,nobold]"
-    clean: "#[fg=#c4a7e7,nobold]"
-    divergence: "#[fg=#c4a7e7,nobold]"
+    state: "#[fg=#fc514e,nobold]"
+    branch: "#[fg=#7fdbca,bold]"
+    staged: "#[fg=#21c7a8,nobold]"
+    insertions: "#[fg=#a1cd5e,nobold]"
+    deletions: "#[fg=#fc514e,nobold]"
+    conflict: "#[fg=#fc514e,nobold]"
+    modified: "#[fg=#ff9e64,nobold]"
+    untracked: "#[fg=#82aaff,nobold]"
+    stashed: "#[fg=#acb4c2,nobold]"
+    clean: "#[fg=#7fdbca,nobold]"
+    divergence: "#[fg=#7fdbca,nobold]"
   layout: [branch, divergence, flags, stats, " "]
   options:
     branch_max_len: 0
@@ -68,6 +68,7 @@ tmux:
 # stashed: "#[fg=#6e6a86,nobold]"
 # clean: "#[fg=#c4a7e7,nobold]"
 # divergence: "#[fg=#c4a7e7,nobold]"
+
 # Catppuccin
 # state: "#[fg=#F38BA8,nobold]"
 # branch: "#[fg=#EBA0AC",nobold]"
