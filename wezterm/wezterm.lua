@@ -15,25 +15,25 @@ config.font = wezterm.font("Hack")
 -- font size
 config.font_size = 16
 -- colorscheme
-config.color_scheme = "Rosé Pine (Gogh)"
+config.color_scheme = "Night Owl (Gogh)"
 
 -- dim the brightness of the background image
 -- background image
--- config.background = {
--- 	{
--- 		source = {
--- 			File = {
--- 				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Flower.jpeg",
--- 				speed = 0.2,
--- 			},
--- 		},
--- 		hsb = { brightness = 0.1 },
--- 		vertical_align = "Middle",
--- 		opacity = 0.9,
--- 		height = "Cover",
--- 		width = "Cover",
--- 	},
--- }
+config.background = {
+	{
+		source = {
+			File = {
+				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Anyone by Tiago Calliari.jpg",
+				speed = 0.2,
+			},
+		},
+		hsb = { brightness = 0.1 },
+		vertical_align = "Middle",
+		opacity = 0.9,
+		height = "Cover",
+		width = "Cover",
+	},
+}
 -- high window baggVGnr
 config.window_decorations = "RESIZE"
 -- window background opacity

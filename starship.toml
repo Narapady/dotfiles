@@ -20,7 +20,8 @@ continuation_prompt = '▶▶ '
 
 [character]
 success_symbol = '[](bold green)'
-error_symbol = '[](bold red)'
+error_symbol = '[ ](bold red)'
+vicmd_symbol = '[](bold green)'
 
 # Replace the '❯' symbol in the prompt with '➜'
 
