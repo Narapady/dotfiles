@@ -4,7 +4,7 @@ local function get_diagnostic_label(props)
     Error = " ",
     Warn = " ",
     Info = " ",
-    Hint = "󰛨 ",
+    Hint = " ",
   }
 
   local label = {}
@@ -21,7 +21,7 @@ end
 
 -- for displaying git sign
 local function get_git_diff(props)
-  local icons = { removed = " ", changed = "󱩽 ", added = " " }
+  local icons = { removed = "󰍷 ", changed = " ", added = "  " }
   local labels = {}
   local signs = vim.api.nvim_buf_get_var(props.buf, "gitsigns_status_dict")
   -- local signs = vim.b.gitsigns_status_dict

@@ -118,11 +118,15 @@ return {
       })
     end,
   },
-
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    lazy = true,
+    priority = 1000,
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "nightfly",
     },
   },
 }
