@@ -5,4 +5,5 @@
 -- hide neovim statusline
 vim.opt.laststatus = 0
 vim.opt.relativenumber = false
-vim.opt_local.conceallevel = 1
+vim.opt_local.conceallevel = 2
+vim.opt.conceallevel = 2

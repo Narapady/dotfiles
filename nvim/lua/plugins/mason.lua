@@ -30,7 +30,6 @@ return {
         "lua_ls",
         "pyright",
         "ruff_lsp",
-        "sqlls",
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
@@ -42,8 +41,6 @@ return {
         "isort", -- python formatter
         "black", -- python formatter
         "pylint", -- python linter
-        "sqlfmt", -- sql formatter
-        "sql-formatter",
       },
     })
   end,

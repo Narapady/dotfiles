@@ -11,35 +11,35 @@ if wezterm.config_builder then
 end
 
 -- font
-config.font = wezterm.font("Hack")
+config.font = wezterm.font("JetBrains Mono")
 -- font size
 config.font_size = 16
 -- colorscheme
-config.color_scheme = "Night Owl (Gogh)"
+config.color_scheme = "Tokyo Night"
 
 -- dim the brightness of the background image
 -- background image
-config.background = {
-	{
-		source = {
-			File = {
-				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Anyone by Tiago Calliari.jpg",
-				speed = 0.2,
-			},
-		},
-		hsb = { brightness = 0.1 },
-		vertical_align = "Middle",
-		opacity = 0.9,
-		height = "Cover",
-		width = "Cover",
-	},
-}
+-- config.background = {
+-- 	{
+-- 		source = {
+-- 			File = {
+-- 				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Anyone by Tiago Calliari.jpg",
+-- 				speed = 0.2,
+-- 			},
+-- 		},
+-- 		hsb = { brightness = 0.05 },
+-- 		vertical_align = "Middle",
+-- 		opacity = 0.9,
+-- 		height = "Cover",
+-- 		width = "Cover",
+-- 	},
+-- }
 -- high window baggVGnr
 config.window_decorations = "RESIZE"
 -- window background opacity
-config.window_background_opacity = 0.7
+config.window_background_opacity = 0.85
 -- window background blur
-config.macos_window_background_blur = 50
+config.macos_window_background_blur = 60
 -- no tab bar
 config.enable_tab_bar = false
 -- window padding

@@ -7,7 +7,7 @@ source "$CONFIG_DIR/icons.sh"
 source "$CONFIG_DIR/colors.sh"
 
 PADDINGS=8
-FONT="Hack NF"
+FONT="JetBrainsMono Nert Font"
 
 # Bar Appearance
 bar=(
@@ -96,4 +96,3 @@ separator=(
 	background.color=$WHITE_25
 	background.y_offset=-16
 )
-

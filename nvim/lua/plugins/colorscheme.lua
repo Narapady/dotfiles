@@ -75,7 +75,6 @@ return {
       vim.g.nightflyNormalFloat = true
     end,
   },
-  -- Grovbox
   {
     "sainnhe/gruvbox-material",
     lazy = true,
@@ -124,9 +123,14 @@ return {
     priority = 1000,
   },
   {
+    "Mofiqul/vscode.nvim",
+    lazy = true,
+    priority = 1000,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nightfly",
+      colorscheme = "tokyonight",
     },
   },
 }
