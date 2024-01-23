@@ -37,9 +37,9 @@ config.color_scheme = "Tokyo Night"
 -- high window baggVGnr
 config.window_decorations = "RESIZE"
 -- window background opacity
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.8
 -- window background blur
-config.macos_window_background_blur = 60
+config.macos_window_background_blur = 80
 -- no tab bar
 config.enable_tab_bar = false
 -- window padding
