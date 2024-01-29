@@ -19,8 +19,25 @@ return {
         settings = {
           python = {
             analysis = {
-              typeCheckingMode = "off",
-              diagnosticMode = "off",
+              diagnosticSeverityOverrides = {
+                reportGeneralTypeIssues = "information",
+                reportPrivateImportUsage = "information",
+                reportOptionalOperand = "information",
+                reportOptionalSubscript = "information",
+                reportOptionalMemberAccess = "information",
+              },
+            },
+          },
+        },
+      },
+      ruff_lsp = {
+        init_options = {
+          settings = {
+            args = {
+              "--extend-select",
+              "W,C90,UP,ASYNC,S,B,A,COM,C4,DTZ,T10,EXE,ISC,ICN,G,INP,PIE,PYI,PT,RET,SIM,TID,TCH,PL,TRY,PD,NPY,PERF",
+              "--ignore",
+              "E402,E501,W291,PLR0913,W293,S101,RET504,RET505,C901,TRY003,F401,PLR0915,COM812,PLR2004,S301,S311,PIE808,B007,UP039,SIM300,PLR5501",
             },
           },
         },

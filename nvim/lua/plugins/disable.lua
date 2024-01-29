@@ -5,5 +5,6 @@ return {
     enabled = false,
   },
   { "folke/persistence.nvim", enabled = false },
+  { "folke/trouble.nvim", enabled = false },
   { "linux-cultist/venv-selector.nvim", enabled = false },
 }

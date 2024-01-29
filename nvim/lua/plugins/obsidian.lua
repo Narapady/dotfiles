@@ -31,7 +31,7 @@ return {
       workspaces = {
         {
           name = "Notes",
-          path = "/Users/narapadychhuoy/Repos/narapadyvault",
+          path = "/Users/narapadychhuoy/Repos/second-brain/",
         },
       },
       completion = {

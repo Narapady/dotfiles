@@ -22,7 +22,7 @@ return {
         path_display = { "smart" },
         prompt_position = "top",
         prompt_prefix = "  ",
-        selection_caret = " ",
+        selection_caret = " ",
         sorting_strategy = "ascending",
         vimgrep_arguments = {
           "rg",
@@ -102,7 +102,7 @@ return {
       },
       --  findd commands
       {
-        ";c",
+        ";x",
         function()
           local builtin = require("telescope.builtin")
           builtin.commands()

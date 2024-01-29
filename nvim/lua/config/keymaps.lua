@@ -12,6 +12,7 @@ vim.keymap.set("n", "<C-u>", ":u<CR>", { silent = true }) -- undo
 -- accept line copilot
 vim.keymap.set({ "i", "n" }, "<C-y>", "<cmd>lua require('copilot.suggestion').accept_line()<CR>", { silent = true })
 vim.keymap.set({ "i", "n" }, "<C-e>", "<cmd>lua require('copilot.suggestion').accept()<CR>", { silent = true })
+-- lazygit
 vim.keymap.set("n", ";g", function()
   Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false })
 end, { desc = "Lazygit (root dir)" })

@@ -128,6 +128,19 @@ return {
     priority = 1000,
   },
   {
+    "EdenEast/nightfox.nvim",
+    lazy = true,
+    priority = 1000,
+  },
+  {
+    "projekt0n/github-nvim-theme",
+    lazy = true,
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      require("github-theme").setup({})
+    end,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "tokyonight",
