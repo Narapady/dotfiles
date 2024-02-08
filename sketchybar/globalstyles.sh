@@ -7,7 +7,7 @@ source "$CONFIG_DIR/icons.sh"
 source "$CONFIG_DIR/colors.sh"
 
 PADDINGS=8
-FONT="JetBrainsMono Nert Font"
+FONT="Fira Code"
 
 # Bar Appearance
 bar=(
@@ -15,9 +15,9 @@ bar=(
 	position=top
 	topmost=off
 	sticky=on
-	height=60
-	padding_left=30
-	padding_right=30
+	height=50
+	padding_left=20
+	padding_right=20
 	corner_radius=0
 	blur_radius=0
 	notch_width=160
@@ -66,7 +66,7 @@ notification_defaults=(
 
 bracket_defaults=(
 	background.height=24
-	background.color=$BAR_COLOR
+	background.color=$DARK_GREY
 	blur_radius=32
 	background.corner_radius=$PADDINGS
 )

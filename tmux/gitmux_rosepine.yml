@@ -1,17 +1,17 @@
 tmux:
   symbols:
-    branch: " "
+    branch: "󰳏 "
     hashprefix: ":"
-    ahead: " "
-    behind: " "
+    ahead: "  "
+    behind: " "
     staged: " "
     conflict: "󰕚 "
-    modified: "󱩽 "
+    modified: " "
     untracked: " "
     stashed: " "
     clean: " "
-    insertions: " "
-    deletions: " "
+    insertions: " "
+    deletions: " "
   styles:
     state: "#[fg=#eb6f92,nobold]"
     branch: "#[fg=#ebbcba,nobold]"

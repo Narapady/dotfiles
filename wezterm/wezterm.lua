@@ -1,6 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-
+local colors = require("lua/rose-pine").colors()
 -- This table will hold the configuration.
 local config = {}
 
@@ -11,23 +11,22 @@ if wezterm.config_builder then
 end
 
 -- font
-config.font = wezterm.font("JetBrains Mono")
+config.font = wezterm.font("Fira Code")
 -- font size
-config.font_size = 16
+config.font_size = 15
 -- colorscheme
-config.color_scheme = "Tokyo Night"
-
--- dim the brightness of the background image
+-- config.color_scheme = "kanagawabones"
+config.colors = colors
 -- background image
 -- config.background = {
 -- 	{
 -- 		source = {
 -- 			File = {
--- 				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Anyone by Tiago Calliari.jpg",
+-- 				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Geisha Samurai Snow.png",
 -- 				speed = 0.2,
 -- 			},
 -- 		},
--- 		hsb = { brightness = 0.05 },
+-- 		hsb = { brightness = 0.1 },
 -- 		vertical_align = "Middle",
 -- 		opacity = 0.9,
 -- 		height = "Cover",
@@ -37,9 +36,9 @@ config.color_scheme = "Tokyo Night"
 -- high window baggVGnr
 config.window_decorations = "RESIZE"
 -- window background opacity
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.95
 -- window background blur
-config.macos_window_background_blur = 80
+config.macos_window_background_blur = 0
 -- no tab bar
 config.enable_tab_bar = false
 -- window padding
