@@ -19,13 +19,8 @@ return {
         settings = {
           python = {
             analysis = {
-              diagnosticSeverityOverrides = {
-                reportGeneralTypeIssues = "information",
-                reportPrivateImportUsage = "information",
-                reportOptionalOperand = "information",
-                reportOptionalSubscript = "information",
-                reportOptionalMemberAccess = "information",
-              },
+              typeCheckingMode = "off",
+              diagnosticMode = "off",
             },
           },
         },

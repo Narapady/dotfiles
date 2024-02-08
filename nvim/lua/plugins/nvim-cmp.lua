@@ -1,3 +1,4 @@
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#363646" })
 return {
   "hrsh7th/nvim-cmp",
   version = false, -- last release is way too old

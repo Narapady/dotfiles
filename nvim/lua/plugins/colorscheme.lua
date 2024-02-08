@@ -118,11 +118,6 @@ return {
     end,
   },
   {
-    "nyoom-engineering/oxocarbon.nvim",
-    lazy = true,
-    priority = 1000,
-  },
-  {
     "Mofiqul/vscode.nvim",
     lazy = true,
     priority = 1000,
@@ -132,18 +127,21 @@ return {
     lazy = true,
     priority = 1000,
   },
-  {
-    "projekt0n/github-nvim-theme",
-    lazy = true,
-    priority = 1000, -- make sure to load this before all the other start plugins
-    config = function()
-      require("github-theme").setup({})
-    end,
-  },
+  -- Packer
+  -- {
+  --   "folke/styler.nvim",
+  --   config = function()
+  --     require("styler").setup({
+  --       themes = {
+  --         markdown = { colorscheme = "tokyonight" },
+  --       },
+  --     })
+  --   end,
+  -- },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "rose-pine",
     },
   },
 }

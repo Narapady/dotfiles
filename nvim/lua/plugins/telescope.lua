@@ -79,7 +79,6 @@ return {
       { "<leader>sd", false }, -- disble show diagnostics keymap
       { "<leader>ff", false }, -- disble file files
       { "<leader>sC", false }, -- disble find commands
-      { "<leader>sh", false }, -- disble help tags
       { "<leader>sD", false }, -- disble workspace diagnostics
       { "<leader>sG", false }, -- disble workspace diagnostics
 
@@ -91,14 +90,6 @@ return {
           builtin.buffers()
         end,
         desc = "Lists opened buffers",
-      },
-      {
-        ";h",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.help_tags()
-        end,
-        desc = "Lists available help tags and opens a new window with the relevant help info",
       },
       --  findd commands
       {
@@ -137,20 +128,12 @@ return {
         desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
       },
       {
-        ";d",
+        ";dd",
         function()
           local builtin = require("telescope.builtin")
           builtin.diagnostics()
         end,
         desc = "Lists Diagnostics for all open buffers or a specific buffer",
-      },
-      {
-        ";t",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.treesitter()
-        end,
-        desc = "Lists Function names, variables, from Treesitter",
       },
       {
         ";s",

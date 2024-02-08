@@ -19,7 +19,7 @@ return {
         "<cmd>ObsidianQuickSwitch<CR>",
         { silent = true, desc = "ObsidianQuickSwitch" }
       ),
-      vim.keymap.set("n", "gD", function()
+      vim.keymap.set("n", "gtl", function()
         if require("obsidian").util.cursor_on_markdown_link() then
           return "<cmd>ObsidianFollowLink<CR>"
         else
