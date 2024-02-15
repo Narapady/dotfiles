@@ -1,16 +1,16 @@
 local M = {}
 
 local palette = {
-	base = "#191724",
-	overlay = "#26233a",
-	muted = "#6e6a86",
-	text = "#e0def4",
-	love = "#eb6f92",
-	gold = "#f6c177",
-	rose = "#ebbcba",
-	pine = "#31748f",
-	foam = "#9ccfd8",
-	iris = "#c4a7e7",
+	base = "#161616",
+	overlay = "#2a2a2a",
+	muted = "#484848",
+	text = "#f2f4f8",
+	love = "#ee5396",
+	gold = "#2dc7c4",
+	rose = "#25be6a",
+	pine = "#33b1ff",
+	foam = "#8cb6ff",
+	iris = "#be95ff",
 	highlight_high = "#524f67",
 }
 

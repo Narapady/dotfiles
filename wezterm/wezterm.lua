@@ -1,6 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-local colors = require("lua/rose-pine").colors()
+local colors = require("lua/nightfox").colors()
 -- This table will hold the configuration.
 local config = {}
 
@@ -17,18 +17,18 @@ config.font_size = 15
 -- colorscheme
 -- config.color_scheme = "kanagawabones"
 config.colors = colors
--- background image
+-- background imaged
 -- config.background = {
 -- 	{
 -- 		source = {
 -- 			File = {
--- 				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Geisha Samurai Snow.png",
+-- 				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Wezterm Blue.gif",
 -- 				speed = 0.2,
 -- 			},
 -- 		},
 -- 		hsb = { brightness = 0.1 },
 -- 		vertical_align = "Middle",
--- 		opacity = 0.9,
+-- 		opacity = 0.8,
 -- 		height = "Cover",
 -- 		width = "Cover",
 -- 	},
@@ -36,9 +36,9 @@ config.colors = colors
 -- high window baggVGnr
 config.window_decorations = "RESIZE"
 -- window background opacity
-config.window_background_opacity = 0.95
+config.window_background_opacity = 1
 -- window background blur
-config.macos_window_background_blur = 0
+config.macos_window_background_blur = 80
 -- no tab bar
 config.enable_tab_bar = false
 -- window padding

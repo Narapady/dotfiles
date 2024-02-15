@@ -1,18 +1,80 @@
-config.colors = {
-	foreground = "#dcd7ba",
-	background = "#16161D",
+-- kanagawa
 
-	cursor_bg = "#c8c093",
-	cursor_fg = "#c8c093",
-	cursor_border = "#c8c093",
+local M = {}
 
-	selection_fg = "#c8c093",
-	selection_bg = "#2d4f67",
-
-	scrollbar_thumb = "#16161d",
-	split = "#16161d",
-
-	ansi = { "#090618", "#c34043", "#76946a", "#c0a36e", "#7e9cd8", "#957fb8", "#6a9589", "#c8c093" },
-	brights = { "#727169", "#e82424", "#98bb6c", "#e6c384", "#7fb4ca", "#938aa9", "#7aa89f", "#dcd7ba" },
-	indexed = { [16] = "#ffa066", [17] = "#ff5d62" },
+local palette = {
+	base = "#16161d",
+	overlay = "#090618",
+	muted = "#727169",
+	text = "#dcd7ba",
+	love = "#e82424",
+	gold = "#e6c384",
+	rose = "#ffa066",
+	pine = "#7fb4ca",
+	foam = "#7aa89f",
+	iris = "#957fb8",
+	highlight_high = "#938aa9",
 }
+
+local active_tab = {
+	bg_color = palette.overlay,
+	fg_color = palette.text,
+}
+
+local inactive_tab = {
+	bg_color = palette.base,
+	fg_color = palette.muted,
+}
+
+function M.colors()
+	return {
+		foreground = palette.text,
+		background = palette.base,
+		cursor_bg = palette.highlight_high,
+		cursor_border = palette.highlight_high,
+		cursor_fg = palette.text,
+		selection_bg = "#2a283e",
+		selection_fg = palette.text,
+
+		ansi = {
+			palette.overlay,
+			palette.love,
+			palette.pine,
+			palette.gold,
+			palette.foam,
+			palette.iris,
+			palette.rose,
+			palette.text,
+		},
+
+		brights = {
+			palette.muted,
+			palette.love,
+			palette.pine,
+			palette.gold,
+			palette.foam,
+			palette.iris,
+			palette.rose,
+			palette.text,
+		},
+
+		tab_bar = {
+			background = palette.base,
+			active_tab = active_tab,
+			inactive_tab = inactive_tab,
+			inactive_tab_hover = active_tab,
+			new_tab = inactive_tab,
+			new_tab_hover = active_tab,
+			inactive_tab_edge = palette.muted, -- (Fancy tab bar only)
+		},
+	}
+end
+
+function M.window_frame() -- (Fancy tab bar only)
+	return {
+		active_titlebar_bg = palette.base,
+		inactive_titlebar_bg = palette.base,
+	}
+end
+
+return M
