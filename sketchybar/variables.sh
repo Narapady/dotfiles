@@ -3,15 +3,16 @@
 # Color Palette
 # Tokyonight Night
 BLACK=0xff24283b
-WHITE=0xffa9b1d6
-MAGENTA=0xffbb9af7
-BLUE=0xff7aa2f7
-CYAN=0xff7dcfff
-GREEN=0xff9ece6a
+WHITE=0xfff2f4f8
+MAGENTA=0xffbe95ff
+BLUE=0xff33b1ff
+CYAN=0xff2dc7c4
+GREEN=0xff25be6a
 YELLOW=0xffe0af68
 ORANGE=0xffff9e64
 RED=0xfff7768e
-BAR_COLOR=0xff1a1b26
+BAR_COLOR=0xff161616
+PINK=0xffee5396
 COMMENT=0xff565f89
 
 # Tokyonight Day
@@ -35,7 +36,7 @@ LABEL_COLOR=$WHITE # Color of all labels
 ITEM_DIR="$HOME/.config/sketchybar/items"
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 
-FONT="JetBrainsMono Nerd Font"
+FONT="FiraMono Nerd Font"
 
 PADDINGS=3
 
