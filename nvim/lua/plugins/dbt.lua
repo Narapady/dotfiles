@@ -1,5 +1,6 @@
 return {
   "PedramNavid/dbtpal",
+  lazy = true,
   config = function()
     local dbt = require("dbtpal")
     dbt.setup({

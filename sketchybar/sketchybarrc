@@ -1,37 +1,57 @@
-PLUGIN_DIR="$CONFIG_DIR/plugins"
-ITEM_DIR="$CONFIG_DIR/items"
+#!/usr/bin/env bash
 
-# Load global styles, colors and icons
-source "$CONFIG_DIR/globalstyles.sh"
+source "$HOME/.config/sketchybar/variables.sh" # Loads all defined colors
 
-POPUP_CLICK_SCRIPT="sketchybar --set \$NAME popup.drawing=toggle"
-POPUP_OFF="sketchybar --set \$NAME popup.drawing=off"
+# General bar and defaults
 
-# Unload the macOS on screen indicator overlay for volume change
-launchctl unload -F /System/Library/LaunchAgents/com.apple.OSDUIHelper.plist > /dev/null 2>&1 &
-
-sketchybar --bar "${bar[@]}" --default "${item_defaults[@]}"
+sketchybar --bar height=30 \
+	color="$BAR_COLOR" \
+	shadow="$SHADOW" \
+	position=top \
+	sticky=on \
+	padding_right=0 \
+	padding_left=3 \
+	corner_radius="$CORNER_RADIUS" \
+	y_offset=5 \
+	margin=5 \
+	blur_radius=20 \
+	notch_width=200 \
+	--default updates=when_shown \
+	icon.font="$FONT:Bold:13.5" \
+	icon.color="$ICON_COLOR" \
+	icon.padding_left="$PADDINGS" \
+	icon.padding_right="$PADDINGS" \
+	label.font="$FONT:Bold:13.0" \
+	label.color="$LABEL_COLOR" \
+	label.padding_left="$PADDINGS" \
+	label.padding_right="$PADDINGS" \
+	background.padding_right="$PADDINGS" \
+	background.padding_left="$PADDINGS" \
+	popup.background.border_width=1 \
+	popup.background.corner_radius=11 \
+	popup.background.border_color="$POPUP_BORDER_COLOR" \
+	popup.background.color="$POPUP_BACKGROUND_COLOR" \
+	popup.background.shadow.drawing="$SHADOW"
 
 # Left
-source "$ITEM_DIR/apple.sh"
+# source "$ITEM_DIR/apple.sh"
 source "$ITEM_DIR/spaces.sh"
 source "$ITEM_DIR/front_app.sh"
 
-# Right
-source "$ITEM_DIR/datetime.sh"
-source "$ITEM_DIR/wifi.sh"
-source "$ITEM_DIR/battery.sh"
-source "$ITEM_DIR/weather.sh"
-# source "$ITEM_DIR/messages.sh"
-source "$ITEM_DIR/transmission.sh"
-source "$ITEM_DIR/music.sh"
+# Center (of notch)
+source "$ITEM_DIR/spotify.sh"
 
-# Brackets
-sketchybar \
---add bracket left_side logo yabai '/space\..*/' \
-        --set left_side "${bracket_defaults[@]}" \
-\
---add bracket status_icons transmission messages weather volume_icon volume battery wifi date clock dnd \
-        --set status_icons "${bracket_defaults[@]}"
+# Right
+source "$ITEM_DIR/clock.sh"
+source "$ITEM_DIR/calendar.sh"
+source "$ITEM_DIR/battery.sh"
+source "$ITEM_DIR/volume.sh"
+source "$ITEM_DIR/cpu.sh"
+
+#################### Finalizing Setup ####################
+
+sketchybar --hotload true
 
 sketchybar --update
+
+echo "sketchybar configuration loaded.."

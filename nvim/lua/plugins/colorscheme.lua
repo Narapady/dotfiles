@@ -123,25 +123,30 @@ return {
     priority = 1000,
   },
   {
+    "Mofiqul/dracula.nvim",
+    lazy = true,
+    priority = 1000,
+  },
+  {
     "EdenEast/nightfox.nvim",
     lazy = true,
     priority = 1000,
   },
-  -- Packer
-  -- {
-  --   "folke/styler.nvim",
-  --   config = function()
-  --     require("styler").setup({
-  --       themes = {
-  --         markdown = { colorscheme = "tokyonight" },
-  --       },
-  --     })
-  --   end,
-  -- },
+  {
+    "folke/styler.nvim",
+    enabled = false,
+    config = function()
+      require("styler").setup({
+        themes = {
+          markdown = { colorscheme = "tokyonight" },
+        },
+      })
+    end,
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "carbonfox",
     },
   },
 }
