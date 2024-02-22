@@ -28,9 +28,8 @@ sketchybar --add item spacer.2 left \
 
 sketchybar --add bracket spaces '/space.*/' \
 	--set spaces background.border_width="$BORDER_WIDTH" \
-	background.border_color="$PINK" \
 	background.corner_radius="$CORNER_RADIUS" \
-	background.color="$BAR_COLOR" \
+	background.color="$BLACK" \
 	background.height=26 \
 	background.drawing=on
 
@@ -41,4 +40,4 @@ sketchybar --add item separator left \
 	background.padding_right=15 \
 	label.drawing=off \
 	associated_display=active \
-	icon.color="$GREEN"
+	icon.color="$PINK"

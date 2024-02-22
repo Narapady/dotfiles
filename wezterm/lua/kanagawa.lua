@@ -1,9 +1,8 @@
 -- kanagawa
 
 local M = {}
-
 local palette = {
-	base = "#16161d",
+	base = "#1f1f28", -- #16161d
 	overlay = "#090618",
 	muted = "#727169",
 	text = "#dcd7ba",

@@ -134,7 +134,6 @@ return {
   },
   {
     "folke/styler.nvim",
-    enabled = false,
     config = function()
       require("styler").setup({
         themes = {
@@ -146,7 +145,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "carbonfox",
+      colorscheme = "kanagawa",
     },
   },
 }

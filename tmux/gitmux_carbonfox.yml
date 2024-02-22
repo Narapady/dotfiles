@@ -2,8 +2,8 @@ tmux:
   symbols:
     branch: "󰳏 "
     hashprefix: ":"
-    ahead: "  "
-    behind: " "
+    ahead: "   "
+    behind: "   "
     staged: " "
     conflict: "󰕚 "
     modified: " "

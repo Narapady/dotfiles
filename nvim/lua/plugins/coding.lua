@@ -7,7 +7,6 @@ return {
     "HiPhish/nvim-ts-rainbow2",
     event = "BufReadPre",
   },
-
   -- show color on Hex color code
   {
     "NvChad/nvim-colorizer.lua",

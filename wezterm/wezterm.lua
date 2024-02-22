@@ -1,6 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-local colors = require("lua/nightfox").colors()
+local colors = require("lua/kanagawa").colors()
 -- This table will hold the configuration.
 local config = {}
 
@@ -11,7 +11,7 @@ if wezterm.config_builder then
 end
 
 -- font
-config.font = wezterm.font("Fira Code")
+config.font = wezterm.font("JetBrains Mono", { weight = "Regular" })
 -- font size
 config.font_size = 15
 -- colorscheme
@@ -38,7 +38,7 @@ config.window_decorations = "RESIZE"
 -- window background opacity
 config.window_background_opacity = 1
 -- window background blur
-config.macos_window_background_blur = 80
+config.macos_window_background_blur = 90
 -- no tab bar
 config.enable_tab_bar = false
 -- window padding
@@ -46,7 +46,8 @@ config.window_padding = {
 	left = 20,
 	right = 20,
 	top = 20,
-	bottom = 30,
+	bottom = 10,
 }
+
 -- return the configuration to wezterm
 return config
