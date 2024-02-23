@@ -64,16 +64,6 @@ home_symbol = '~'
 #"~/" = "~./"
 "~" = "  "
 
-
-[fill]
-symbol = ' '
-#symbol = '・'
-
-[c]
-symbol = ""
-style = "bg:#1f1f28"
-format = '[ $symbol ]($style)'
-
 [docker_context]
 symbol = " "
 style = "bg:#1f1f28"
