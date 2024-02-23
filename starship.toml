@@ -87,27 +87,18 @@ truncation_length = 15
 [git_status]
 style = "fg:#957fb8 bg:#1f1f28"
 conflicted = "~"
-up_to_date = "  "
-untracked = " "
-ahead = "  ${count}"
+up_to_date =  '[ ](fg:#6a9589 bg:#1f1f28)'
+untracked = "[ ](fg:#7E9cd8 bg:#1f1f28)"
+ahead = "[  ${count}](fg:#6a9589 bg:#1f1f28)"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-behind = "  ${count}"
+behind = "[  ${count}](fg:#6a9589 bg:#1f1f28)"
 stashed = "*"
-modified = "  "
-staged = '[++\($count\) ](fg:#56b60a bg:#1f1f28)'
+modified = '[ ](fg:#E6C384 bg:#1f1f28)'
+staged = '[++\($count\) ](fg:#ffa066 bg:#1f1f28)'
 renamed = " "
-deleted = " "
-format = '[$all_status$ahead_behind ]($style)'
-
-[golang]
-symbol = "go"
-style = "fg:#FFFFFF bg:#1f1f28"
-format = '[ $symbol ](bold $style)'
-
-[nodejs]
-symbol = ""
-style = "fg:#0a96d6 bg:#1f1f28"
-format = '[ $symbol ]($style)'
+deleted = "[ ](fg:#E82424 bg:#1f1f28)"
+# format = '[$all_status$ahead_behind ]($style)'
+format = '[$modified ]()[$untracked ]()[$ahead_behind ]()[$staged ]()[$deleted ]()'
 
 [python]
 python_binary = ["./venv/bin/python", "./.venv/bin/python", "python3", "python", "python2"]
@@ -115,10 +106,6 @@ symbol = ' '
 style = "fg:#7aa89f bg:#1f1f28"
 format = '[ $symbol ]($style)'
 
-[rust]
-symbol = ""
-style = "fg:#0a96d6 bg:#1f1f28"
-format = '[ $symbol ]($style)'
 
 [time]
 disabled = false
