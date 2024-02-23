@@ -39,4 +39,14 @@ return {
       },
     },
   },
+  {
+    "folke/todo-comments.nvim",
+    cmd = { "TodoTrouble", "TodoTelescope" },
+    event = "LazyFile",
+    config = true,
+    -- stylua: ignore
+    keys = {
+      {";t", "<cmd>TodoTelescope<cr>", desc = "Todo" },
+    },
+  },
 }

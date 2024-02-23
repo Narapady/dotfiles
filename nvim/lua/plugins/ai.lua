@@ -2,7 +2,6 @@ return {
   -- custom config which piggybacks on the copilot extras in lazy.lua.
   {
     "zbirenbaum/copilot.lua",
-    enabled = false,
     cmd = "Copilot",
     build = ":Copilot auth",
     event = "InsertEnter",

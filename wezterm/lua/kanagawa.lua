@@ -2,7 +2,7 @@
 
 local M = {}
 local palette = {
-	base = "#1f1f28", -- #16161d
+	base = "#1f1f28", -- #1f1f28
 	overlay = "#090618",
 	muted = "#727169",
 	text = "#dcd7ba",
@@ -17,11 +17,7 @@ local palette = {
 
 local active_tab = {
 	bg_color = palette.overlay,
-	fg_color = palette.text,
-}
-
-local inactive_tab = {
-	bg_color = palette.base,
+	fg_color = palette.texte,
 	fg_color = palette.muted,
 }
 

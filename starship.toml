@@ -1,87 +1,127 @@
-# Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
-add_newline = false
-
-command_timeout = 1000
-
 format = """
+╭─[](bg:#1f1f28 fg:#1f1f28)\
+$username\
+[ ](bg:#1f1f28 fg:#E82424)\
 $directory\
 $git_branch\
-$git_state\
 $git_status\
-$python\
-$git_metrics\
-$cmd_duration $jobs\
-$line_break\
-$character\
+$cmd_duration\
+[](#1f1f28)\
+\n╰─$character
 """
+# Disable the blank line at the start of the prompt
+add_newline = false
 
-continuation_prompt = '▶▶ '
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+show_always = true
+style_user = "fg:#7E9CD8 bg:#1f1f28"
+style_root = "fg:white bg:#1f1f28"
+format = '[$user]($style)'
+disabled = false
+
+[status]
+style = 'bg:#1f1f28'
+symbol = '[✘ ](fg:red bg:#1f1f28)'
+success_symbol = '[✔ ](fg:green bg:#1f1f28)'
+format = '[[$signal_name ](fg:red bg:#1f1f28)$symbol]($style)'
+map_symbol = false
+disabled = false
 
 [character]
-success_symbol = '[ ](bold green)'
-error_symbol = '[ ](bold red)'
-vicmd_symbol = '[](bold green)'
+success_symbol = '[❯](bold green)'
+error_symbol = '[✘](fg:red)'
 
-# Replace the '❯' symbol in the prompt with '➜'
-
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true
-
-[username]
-style_user = "green bold"
-style_root = "red bold"
-format = "[$user]($style)"
-disabled = false
-show_always = true
+[cmd_duration]
+min_time = 1
+style = 'bg:#1f1f28 fg:#E82424'
+format = '[ took [$duration](bold fg:#909090 bg:#1f1f28)  ]($style)'
 
 [hostname]
 ssh_only = false
-format = "[@$hostname](green bold)"
+style = 'fg:white bg:#1f1f28'
+format = '[@$hostname]($style)'
 disabled = false
 
-# truncation length works backwards (i.e., cwd > parent > parent ...)
+# An alternative to the username module which displays a symbol that
+# represents the current operating system
+[os]
+style = "bg:#1f1f28"
+disabled = true # Disabled by default
+
 [directory]
-truncation_length = 10
-truncation_symbol = "…/"
+style = "fg:#6A9589 bg:#1f1f28"
+format = "[  $path]($style)"
+truncation_length = 9
+truncation_symbol = " …/"
 truncate_to_repo = true
+home_symbol = '~'
 
-[git_branch]
-truncation_length = 10
-truncation_symbol = ''
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+#"~/" = "~./"
+"~" = "  "
 
-[git_status]
-ahead = '⇡${count}'
-diverged = '⇕⇡${ahead_count}⇣${behind_count}'
-behind = '⇣${count}'
-staged = '[++\($count\)](green)'
 
-[git_commit]
-commit_hash_length = 4
+[fill]
+symbol = ' '
+#symbol = '・'
 
-[env_var.SHELL]
-variable = "SHELL"
-default = "unknown shell"
-disabled = true
-
-[cmd_duration]
-min_time = 500
-format = '[$duration](bold yellow)'
-
-# Show python version starting with venv
-[python]
-python_binary = ["./venv/bin/python", "python3", "python", "python2"]
-
-[aws]
-disabled = false
+[c]
+symbol = ""
+style = "bg:#1f1f28"
+format = '[ $symbol ]($style)'
 
 [docker_context]
-disabled = true
+symbol = " "
+style = "bg:#1f1f28"
+format = '[ $symbol $context ]($style) $path'
 
-[gcloud]
-disabled = true
+[git_branch]
+style = "fg:#E46876 bg:#1f1f28"
+format = '[  ](fg:#E82424 bg:#1f1f28)[󰳏 ](fg:#E46876 bg:#1f1f28)[$branch ](bold $style)'
+truncation_length = 15
+
+[git_status]
+style = "fg:#957fb8 bg:#1f1f28"
+conflicted = "~"
+up_to_date = "  "
+untracked = " "
+ahead = "  ${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "  ${count}"
+stashed = "*"
+modified = "  "
+staged = '[++\($count\) ](fg:#56b60a bg:#1f1f28)'
+renamed = " "
+deleted = " "
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = "go"
+style = "fg:#FFFFFF bg:#1f1f28"
+format = '[ $symbol ](bold $style)'
 
 [nodejs]
-disabled = true
+symbol = ""
+style = "fg:#0a96d6 bg:#1f1f28"
+format = '[ $symbol ]($style)'
 
+[python]
+python_binary = ["./venv/bin/python", "./.venv/bin/python", "python3", "python", "python2"]
+symbol = ' '
+style = "fg:#7aa89f bg:#1f1f28"
+format = '[ $symbol ]($style)'
+
+[rust]
+symbol = ""
+style = "fg:#0a96d6 bg:#1f1f28"
+format = '[ $symbol ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#1f1f28 fg:#E82424"
+format = '[$time ]($style)'
