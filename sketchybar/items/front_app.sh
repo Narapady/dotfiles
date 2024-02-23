@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COLOR="$WHITE"
+COLOR="$ORANGE"
 
 sketchybar \
 	--add item front_app left \

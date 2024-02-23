@@ -15,7 +15,6 @@ config.font = wezterm.font("JetBrains Mono", { weight = "Regular" })
 -- font size
 config.font_size = 15
 -- colorscheme
--- config.color_scheme = "kanagawabones"
 config.colors = colors
 -- background imaged
 -- config.background = {
@@ -46,7 +45,7 @@ config.window_padding = {
 	left = 20,
 	right = 20,
 	top = 20,
-	bottom = 10,
+	bottom = 30,
 }
 
 -- return the configuration to wezterm

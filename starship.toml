@@ -1,7 +1,7 @@
 format = """
-╭─[](bg:#1f1f28 fg:#1f1f28)\
+╭─[ 󱓟  ](fg:#FFA066 bg:#1f1f28)\
 $username\
-[ ](bg:#1f1f28 fg:#E82424)\
+[  ](bg:#1f1f28 fg:#E82424)\
 $directory\
 $git_branch\
 $git_status\
@@ -36,7 +36,7 @@ error_symbol = '[✘](fg:red)'
 [cmd_duration]
 min_time = 1
 style = 'bg:#1f1f28 fg:#E82424'
-format = '[ took [$duration](bold fg:#909090 bg:#1f1f28)  ]($style)'
+format = '[ took [$duration](bold fg:#909090 bg:#1f1f28)  ]($style)'
 
 [hostname]
 ssh_only = false
@@ -81,7 +81,7 @@ format = '[ $symbol $context ]($style) $path'
 
 [git_branch]
 style = "fg:#E46876 bg:#1f1f28"
-format = '[  ](fg:#E82424 bg:#1f1f28)[󰳏 ](fg:#E46876 bg:#1f1f28)[$branch ](bold $style)'
+format = '[   ](fg:#E82424 bg:#1f1f28)[󰳏 ](fg:#E46876 bg:#1f1f28)[$branch ](bold $style)'
 truncation_length = 15
 
 [git_status]
@@ -98,7 +98,7 @@ staged = '[++\($count\) ](fg:#ffa066 bg:#1f1f28)'
 renamed = " "
 deleted = "[ ](fg:#E82424 bg:#1f1f28)"
 # format = '[$all_status$ahead_behind ]($style)'
-format = '[$modified ]()[$untracked ]()[$ahead_behind ]()[$staged ]()[$deleted ]()'
+format = '[$modified]()[$untracked]()[$ahead_behind ]()[$staged]()[$deleted]()'
 
 [python]
 python_binary = ["./venv/bin/python", "./.venv/bin/python", "python3", "python", "python2"]
