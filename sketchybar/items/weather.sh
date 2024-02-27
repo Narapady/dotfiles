@@ -13,20 +13,21 @@ weather=(
 	mouse.exited
 	mouse.exited.global
 )
+
 COLOR="$PINK"
 
 sketchybar --add item weather right \
 	--set weather "${weather[@]}" \
 	--add item weather.details popup.weather \
-	--set weather.details "${menu_item_defaults[@]}" icon.drawing=off label.padding_left=0 \
+	icon.drawing=off \
+	label.padding_left=0 \
 	update_freq=3 \
 	icon.color="$COLOR" \
 	icon.padding_left=10 \
 	label.color="$COLOR" \
 	label.padding_right=10 \
-	background.height=26 \
-	background.corner_radius="$CORNER_RADIUS" \
-	background.padding_right=5 \
-	background.border_width="$BORDER_WIDTH" \
 	background.color="$BLACK" \
+	background.height=26 \
+	background.padding_right=0 \
+	background.padding_right=0 \
 	background.drawing=on

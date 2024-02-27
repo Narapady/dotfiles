@@ -10,9 +10,8 @@ sketchybar --add item battery right \
 	label.padding_right=10 \
 	label.color="$COLOR" \
 	background.height=26 \
-	background.corner_radius="$CORNER_RADIUS" \
-	background.padding_right=5 \
-	background.border_width="$BORDER_WIDTH" \
+	background.padding_left=0 \
+	background.padding_right=0 \
 	background.color="$BLACK" \
 	background.drawing=on \
 	script="$PLUGIN_DIR/power.sh" \

@@ -9,9 +9,8 @@ sketchybar --add item calendar right \
 	label.color="$COLOR" \
 	label.padding_right=10 \
 	background.height=26 \
-	background.corner_radius="$CORNER_RADIUS" \
-	background.padding_right=5 \
-	background.border_width="$BORDER_WIDTH" \
+	background.padding_right=0 \
+	background.padding_left=0 \
 	background.color="$BLACK" \
 	background.drawing=on \
 	script="$PLUGIN_DIR/calendar.sh"

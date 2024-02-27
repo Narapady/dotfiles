@@ -12,9 +12,8 @@ sketchybar --add item clock right \
 	label.width=78 \
 	align=center \
 	background.height=26 \
-	background.corner_radius="$CORNER_RADIUS" \
 	background.padding_right=2 \
-	background.border_width="$BORDER_WIDTH" \
+	background.padding_left=0 \
 	background.color="$BLACK" \
 	background.drawing=on \
 	script="$PLUGIN_DIR/clock.sh"
