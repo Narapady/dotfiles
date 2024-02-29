@@ -11,7 +11,7 @@ if wezterm.config_builder then
 end
 
 -- font
-config.font = wezterm.font("JetBrains Mono", { weight = "Regular" })
+config.font = wezterm.font("SauceCodePro Nerd Font", { weight = "Regular" })
 -- font size
 config.font_size = 15
 -- colorscheme
@@ -27,7 +27,7 @@ config.colors = colors
 -- 		},
 -- 		hsb = { brightness = 0.1 },
 -- 		vertical_align = "Middle",
--- 		opacity = 0.8,
+-- 		opacity = 0.9,
 -- 		height = "Cover",
 -- 		width = "Cover",
 -- 	},
@@ -35,9 +35,9 @@ config.colors = colors
 -- high window baggVGnr
 config.window_decorations = "RESIZE"
 -- window background opacity
-config.window_background_opacity = 1
+config.window_background_opacity = 0.85
 -- window background blur
-config.macos_window_background_blur = 90
+config.macos_window_background_blur = 100
 -- no tab bar
 config.enable_tab_bar = false
 -- window padding

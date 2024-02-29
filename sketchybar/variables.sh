@@ -3,7 +3,7 @@
 # Color Palette
 
 # KANAGAWA
-BLACK=0xff300924
+BLACK=0xff00000000
 WHITE=0xffdcd7ba
 MAGENTA=0xff957fb8
 BLUE=0xff7aa89f
@@ -25,7 +25,7 @@ LABEL_COLOR=$WHITE # Color of all labels
 ITEM_DIR="$HOME/.config/sketchybar/items"
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 
-FONT="JetBrainsMono Nerd Font"
+FONT="SauceCodePro Nerd Font"
 
 PADDINGS=3
 

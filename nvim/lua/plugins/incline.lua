@@ -1,6 +1,7 @@
 return {
   {
     "b0o/incline.nvim",
+    enabled = false,
     branch = "main",
     event = "BufReadPost",
     opts = {

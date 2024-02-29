@@ -4,7 +4,7 @@ source "$HOME/.config/sketchybar/variables.sh" # Loads all defined colors
 
 # General bar and defaults
 
-sketchybar --bar height=28 \
+sketchybar --bar height=26 \
 	color="$BLACK" \
 	shadow="$SHADOW" \
 	position=top \

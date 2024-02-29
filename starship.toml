@@ -36,7 +36,7 @@ error_symbol = '[✘](fg:red)'
 [cmd_duration]
 min_time = 1
 style = 'bg:#1f1f28 fg:#E82424'
-format = '[ took [$duration](bold fg:#909090 bg:#1f1f28)  ]($style)'
+format = '[  took [$duration](bold fg:#909090 bg:#1f1f28)  ]($style)'
 
 [hostname]
 ssh_only = false
@@ -58,12 +58,6 @@ truncation_symbol = " …/"
 truncate_to_repo = true
 home_symbol = '~'
 
-# Here is how you can shorten some long paths by text replacement
-# similar to mapped_locations in Oh My Posh:
-[directory.substitutions]
-#"~/" = "~./"
-"~" = "  "
-
 [docker_context]
 symbol = " "
 style = "bg:#1f1f28"
@@ -78,13 +72,13 @@ truncation_length = 15
 style = "fg:#957fb8 bg:#1f1f28"
 conflicted = "~"
 up_to_date =  '[ ](fg:#6a9589 bg:#1f1f28)'
-untracked = "[ ](fg:#7E9cd8 bg:#1f1f28)"
+untracked = "[ ](fg:#7E9cd8 bg:#1f1f28)"
 ahead = "[  ${count}](fg:#6a9589 bg:#1f1f28)"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "[  ${count}](fg:#6a9589 bg:#1f1f28)"
 stashed = "*"
-modified = '[ ](fg:#E6C384 bg:#1f1f28)'
-staged = '[++\($count\) ](fg:#ffa066 bg:#1f1f28)'
+modified = '[ ](fg:#E6C384 bg:#1f1f28)'
+staged = '[ \($count\) ](fg:#ffa066 bg:#1f1f28)'
 renamed = " "
 deleted = "[ ](fg:#E82424 bg:#1f1f28)"
 # format = '[$all_status$ahead_behind ]($style)'

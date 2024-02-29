@@ -11,6 +11,6 @@ sketchybar --add item calendar right \
 	background.height=26 \
 	background.padding_right=0 \
 	background.padding_left=0 \
-	background.color="$BLACK" \
+	background.color="$TRANSPARENT" \
 	background.drawing=on \
 	script="$PLUGIN_DIR/calendar.sh"

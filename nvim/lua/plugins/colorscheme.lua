@@ -26,7 +26,7 @@ return {
     name = "catppuccin",
     config = function()
       require("catppuccin").setup({
-        flavour = "mocha", -- latte, frappe, macchiato, mocha
+        flavour = "macchiato", -- latte, frappe, macchiato, mocha
         background = { -- :h background
           light = "latte",
           dark = "mocha",
@@ -131,6 +131,16 @@ return {
     "EdenEast/nightfox.nvim",
     lazy = true,
     priority = 1000,
+  },
+  {
+    "navarasu/onedark.nvim",
+    lazy = true,
+    priority = 1000,
+    config = function()
+      require("onedark").setup({
+        style = "deep", -- deep, darker, cool, warm, warmer
+      })
+    end,
   },
   {
     "folke/styler.nvim",

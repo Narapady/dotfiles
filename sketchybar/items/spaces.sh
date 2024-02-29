@@ -13,7 +13,7 @@ for sid in "${SPACE_SIDS[@]}"; do
 		label.font="sketchybar-app-font:Regular:15.0" \
 		label.padding_right=20 \
 		background.height=26 \
-		background.color="$BLACK" \
+		background.color="$TRANSPARENT" \
 		background.padding_left=0 \
 		background.padding_right=0 \
 		script="$PLUGIN_DIR/spaces.sh"
@@ -21,12 +21,12 @@ done
 
 sketchybar --add item space_separator left \
 	--set space_separator icon="􀆌" \
-	icon.color=$PINK \
+	icon.color="$WHITE" \
 	icon.padding_left=10 \
 	label.font="sketchybar-app-font:Regular:15.0" \
 	label.padding_right=5 \
 	background.height=26 \
-	background.color="$BLACK" \
+	background.color="$TRANSPARENT" \
 	background.padding_left=0 \
 	background.padding_right=0 \
 	background.drawing=on \
