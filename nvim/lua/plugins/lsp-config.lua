@@ -5,6 +5,9 @@ return {
     keys[#keys + 1] = { "K", "<cmd>Lspsaga hover_doc<CR>" }
     keys[#keys + 1] = { "gh", "<cmd>Lspsaga peek_definition<CR>" }
     keys[#keys + 1] = { "<leader>rn", "<cmd>Lspsaga rename<CR>" }
+    keys[#keys + 1] = { "go", "<cmd>Lspsaga outgoing_calls<CR>" }
+    keys[#keys + 1] = { "gi", "<cmd>Lspsaga incoming_calls<CR>" }
+    keys[#keys + 1] = { "gf", "<cmd>Lspsaga finder<CR>" }
   end,
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {

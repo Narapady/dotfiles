@@ -28,8 +28,6 @@ return {
       })
     end,
   },
-  -- lsp saga
-  -- only use breadcrumb feature
   {
     "nvimdev/lspsaga.nvim",
     event = "BufReadPre",
@@ -68,11 +66,11 @@ return {
     event = "LazyFile",
     opts = {
       signs = {
-        add = { text = "▎" },
-        change = { text = "▎" },
-        delete = { text = "" },
-        topdelete = { text = "" },
-        changedelete = { text = "▎" },
+        add = { text = " " },
+        change = { text = "  " },
+        delete = { text = " " },
+        topdelete = { text = " " },
+        changedelete = { text = "  " },
         untracked = { text = "▎" },
       },
       on_attach = function(buffer)
@@ -90,17 +88,8 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons", "AndreM222/copilot-lualine" },
-    opts = function(_, opts)
-      table.insert(opts.sections.lualine_c, {
-        function()
-          return require("nvim-navic").get_location()
-        end,
-        cond = function()
-          return package.loaded["nvim-navic"] and require("nvim-navic").is_available()
-        end,
-      })
-    end,
+    dependencies = { "nvim-tree/nvim-web-devicons", "AndreM222/copilot-lualine", "nvimdev/lspsaga.nvim" },
+    opts = {},
     config = function()
       require("lualine").setup({
         options = {
@@ -134,20 +123,40 @@ return {
         },
         tabline = {},
         winbar = {
+          lualine_c = {
+            { "filetype", color = { fg = "#7fb4ca", gui = "bold" } },
+            { "filename", color = { fg = "#7fb4ca", gui = "bold" } },
+            {
+              function()
+                local breadcrum = require("lspsaga.symbol.winbar").get_bar()
+                return breadcrum
+              end,
+            },
+          },
           lualine_a = {
             { "mode", color = { fg = "#98bb6c", gui = "bold" } },
-            { "location", color = { fg = "#7fb4ca" } },
-            { "progress", color = { fg = "#957fb8" } },
-          },
-          lualine_b = {
-            { "copilot", color = { fg = "#ffa066" } },
+            { "branch", color = { fg = "#E46876", gui = "bold" } },
+            {
+              "diff",
+              colored = true, -- Displays a colored diff status if set to true
+              diff_color = {
+                -- Same color values as the general color option can be used here.
+                added = { fg = "#98BB6C", gui = "bold" }, -- Changes the diff's added color
+                modified = { fg = "#ffa066", gui = "bold" }, -- Changes the diff's modified color
+                removed = { fg = "#E82424", gui = "bold" }, -- Changes the diff's removed color you
+              },
+              symbols = { added = " ", modified = " ", removed = " " }, -- Changes the symbols used by the diff.
+            },
             {
               "diagnostics",
               sources = { "nvim_diagnostic" },
               symbols = { error = " ", warn = " ", info = " " },
             },
           },
-          lualine_c = {
+          lualine_b = {
+            { "location", color = { fg = "#7fb4ca", gui = "bold" } },
+            { "progress", color = { fg = "#957fb8", gui = "bold" } },
+            { "copilot", color = { fg = "#ffa066", gui = "bold" } },
             {
               function()
                 local msg = "No Active Lsp"
@@ -164,51 +173,14 @@ return {
                 end
                 return msg
               end,
-              icon = " LSP:",
+              icon = ":",
               color = { fg = "#E46876", gui = "bold" },
             },
-
-            {
-              "diff",
-              colored = true, -- Displays a colored diff status if set to true
-              diff_color = {
-                -- Same color values as the general color option can be used here.
-                added = { fg = "#98BB6C" }, -- Changes the diff's added color
-                modified = { fg = "#ffa066" }, -- Changes the diff's modified color
-                removed = { fg = "#E82424" }, -- Changes the diff's removed color you
-              },
-              symbols = { added = " ", modified = " ", removed = " " }, -- Changes the symbols used by the diff.
-            },
-            { "filetype", color = { fg = "#7fb4ca" } },
-            { "filesize", color = { fg = "#7fb4ca" } },
-            { "filename", color = { fg = "#7fb4ca", gui = "bold" } },
-            { "navic" },
           },
         },
         inactive_winbar = {},
         extensions = {},
       })
-    end,
-  },
-  {
-    "SmiteshP/nvim-navic",
-    lazy = true,
-    init = function()
-      vim.g.navic_silence = true
-      require("lazyvim.util").lsp.on_attach(function(client, buffer)
-        if client.supports_method("textDocument/documentSymbol") then
-          require("nvim-navic").attach(client, buffer)
-        end
-      end)
-    end,
-    opts = function()
-      return {
-        separator = " > ",
-        highlight = true,
-        depth_limit = 5,
-        icons = require("lazyvim.config").icons.kinds,
-        lazy_update_context = true,
-      }
     end,
   },
 }
