@@ -81,7 +81,7 @@ staged = '[ \($count\) ](fg:#ffa066 bg:#00000000)'
 renamed = " "
 deleted = "[](fg:#E82424 bg:#00000000)"
 # format = '[$all_status$ahead_behind ]($style)'
-format = '[$modified ]()[$untracked ]()[$ahead_behind ]()[$staged ]()[$deleted]()'
+format = '[$modified ]()[$untracked ]()[$ahead_behind]()[$staged ]()[$deleted]()'
 
 [python]
 python_binary = ["./venv/bin/python", "./.venv/bin/python", "python3", "python", "python2"]
