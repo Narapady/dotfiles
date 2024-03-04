@@ -2,7 +2,7 @@
 
 COLOR="$PINK"
 
-sketchybar --add item cpu right \
+sketchybar --add item cpu left \
 	--set cpu \
 	update_freq=3 \
 	icon.color="$COLOR" \

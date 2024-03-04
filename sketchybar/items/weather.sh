@@ -16,7 +16,7 @@ weather=(
 
 COLOR="$PINK"
 
-sketchybar --add item weather right \
+sketchybar --add item weather left \
 	--set weather "${weather[@]}" \
 	--add item weather.details popup.weather \
 	icon.drawing=off \

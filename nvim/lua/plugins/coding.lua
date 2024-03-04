@@ -55,4 +55,9 @@ return {
       require("neoscroll").setup({})
     end,
   },
+  {
+    "sindrets/diffview.nvim",
+    event = "VeryLazy",
+    config = true,
+  },
 }

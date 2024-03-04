@@ -82,7 +82,6 @@ return {
 
       -- stylua: ignore start
       map("n", ";h", gs.preview_hunk_inline, "Preview Hunk Inline")
-      map("n", ";d", gs.diffthis, "Diff This")
       end,
     },
   },

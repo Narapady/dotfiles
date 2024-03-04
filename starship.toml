@@ -71,17 +71,17 @@ truncation_length = 15
 style = "fg:#957fb8 bg:#00000000"
 conflicted = "~"
 up_to_date =  '[ ](fg:#6a9589 bg:#00000000)'
-untracked = "[ ](fg:#7E9cd8 bg:#00000000)"
-ahead = "[  ${count}](fg:#6a9589 bg:#00000000)"
+untracked = "[](fg:#7E9cd8 bg:#00000000)"
+ahead = "[ +${count}](fg:#6a9589 bg:#00000000)"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-behind = "[  ${count}](fg:#6a9589 bg:#00000000)"
+behind = "[ -${count}](fg:#6a9589 bg:#00000000)"
 stashed = "*"
 modified = '[ ](fg:#E6C384 bg:#00000000)'
 staged = '[ \($count\) ](fg:#ffa066 bg:#00000000)'
 renamed = " "
-deleted = "[ ](fg:#E82424 bg:#00000000)"
+deleted = "[](fg:#E82424 bg:#00000000)"
 # format = '[$all_status$ahead_behind ]($style)'
-format = '[$modified]()[$untracked]()[$ahead_behind ]()[$staged]()[$deleted]()'
+format = '[$modified ]()[$untracked ]()[$ahead_behind ]()[$staged ]()[$deleted]()'
 
 [python]
 python_binary = ["./venv/bin/python", "./.venv/bin/python", "python3", "python", "python2"]

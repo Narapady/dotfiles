@@ -19,3 +19,5 @@ end, { desc = "Lazygit (root dir)" })
 vim.keymap.set("n", "<C-_>", function()
   Util.terminal(nil, { border = "rounded" })
 end, { desc = "Term with border" })
+
+vim.keymap.set("n", "<leader>D", "<cmd> DiffviewFileHistory<CR>", { silent = true, desc = "DiffviewFileHistory" })
