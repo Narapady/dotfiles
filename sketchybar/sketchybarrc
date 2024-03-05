@@ -2,8 +2,6 @@
 
 source "$HOME/.config/sketchybar/variables.sh" # Loads all defined colors
 
-# General bar and defaults
-
 sketchybar --bar height=26 \
 	color="$BLACK" \
 	shadow="$SHADOW" \
@@ -12,8 +10,8 @@ sketchybar --bar height=26 \
 	padding_right=0 \
 	padding_left=3 \
 	corner_radius="$CORNER_RADIUS" \
-	y_offset=0 \
-	margin=0 \
+	y_offset=4 \
+	margin=8 \
 	blur_radius=20 \
 	notch_width=200 \
 	--default updates=when_shown \
@@ -33,11 +31,9 @@ sketchybar --bar height=26 \
 	popup.background.color="$POPUP_BACKGROUND_COLOR" \
 	popup.background.shadow.drawing="$SHADOW"
 
-# Left
 # source "$ITEM_DIR/apple.sh"
 source "$ITEM_DIR/spaces.sh"
 source "$ITEM_DIR/front_app.sh"
-
 # Right
 source "$ITEM_DIR/clock.sh"
 source "$ITEM_DIR/calendar.sh"

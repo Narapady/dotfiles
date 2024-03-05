@@ -75,10 +75,10 @@ ahead = "[  ${count}](fg:#6a9589 bg:#151515)"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "[ ${count}](fg:#6a9589 bg:#151515)"
 stashed = "*"
-modified = '[  ](fg:#ffa066 bg:#151515)'
+modified = '[ $count ](fg:#ffa066 bg:#151515)'
 staged = '[ $count](fg:#98BB6C bg:#151515)'
 renamed = " "
-deleted = "[ ${count}](fg:#E82424 bg:#151515)"
+deleted = "[ ${count} ](fg:#E82424 bg:#151515)"
 format = '[$all_status$ahead_behind]($style)'
 # format = '[$modified]()[$untracked]()[$ahead_behind]()[$staged]()[$deleted]()'
 
