@@ -42,7 +42,7 @@ config.macos_window_background_blur = 100
 config.enable_tab_bar = false
 -- window padding
 config.window_padding = {
-	left = 5,
+	left = 10,
 	right = 5,
 	top = 0,
 	bottom = 0,

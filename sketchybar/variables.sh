@@ -3,7 +3,7 @@
 # Color Palette
 
 # KANAGAWA
-BLACK=0xff1f1f28
+BLACK=0xff00000000
 WHITE=0xffdcd7ba
 MAGENTA=0xff957fb8
 BLUE=0xff7aa89f

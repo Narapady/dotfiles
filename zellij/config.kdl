@@ -35,11 +35,13 @@ keybinds clear-defaults=true {
         bind "Ctrl b" { TogglePaneFrames; SwitchToMode "Normal"; }
         bind "Ctrl g" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
-        bind "Alt Left" { MoveFocusOrTab "Left"; }
-        bind "Alt Right" { MoveFocusOrTab "Right"; }
-        bind "Alt Down" { MoveFocus "Down"; }
-        bind "Alt Up" { MoveFocus "Up"; }
+        bind "Ctrl f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
+        bind "Alt Left" { MovePane "Left"; }
+        bind "Alt Right" { MovePane "Right"; }
+        bind "Alt Down" { MovePane "Down"; }
+        bind "Alt Up" { MovePane "Up"; }
         bind "Alt n" { NewPane; }
+        bind "Alt d" { CloseFocus; SwitchToMode "Normal"; }
         bind "Alt =" "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt [" { PreviousSwapLayout; }
@@ -118,7 +120,6 @@ keybinds clear-defaults=true {
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
-        bind "Ctrl f" "PageDown" "Right" "l" { PageScrollDown; }
         bind "Ctrl b" "PageUp" "Left" "h" { PageScrollUp; }
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
@@ -176,7 +177,6 @@ keybinds clear-defaults=true {
         bind "j" { MoveFocus "Down"; SwitchToMode "Normal"; }
         bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
         bind "d" { Detach; }
-        bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
         bind "Space" { NextSwapLayout; }
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
         bind "d" { Detach; }
@@ -187,6 +187,11 @@ keybinds clear-defaults=true {
             };
             SwitchToMode "Normal"
         }
+        bind "r" {
+            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zjstatus.wasm" {
+            floating true
+        }
+          }
     }
 }
 
@@ -206,9 +211,12 @@ ui {
 }
 auto_layout true
 theme "kanagawa"
-default_layout "compact"
+default_layout "default"
 mouse_mode true
 copy_command "pbcopy"                     // osx
 copy_clipboard "primary"
 copy_on_select true
 scrollback_editor "/opt/homebrew/bin/nvim"
+layout_dir "~/.config/zellij/layouts/"
+layout "swap"
+default_layout "/home/winston/.config/zellij/layouts/swap.kdl"

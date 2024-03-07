@@ -69,7 +69,7 @@ truncation_length = 15
 [git_status]
 style = "fg:#957fb8 bg:#151515"
 conflicted = "~"
-up_to_date =  '[ ](fg:#6a9589 bg:#151515)'
+up_to_date =  '[  ](fg:#6a9589 bg:#151515)'
 untracked = "[  ${count}](fg:#7E9cd8 bg:#151515)"
 ahead = "[  ${count}](fg:#6a9589 bg:#151515)"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
