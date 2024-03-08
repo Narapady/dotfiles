@@ -35,16 +35,16 @@ config.colors = colors
 -- high window baggVGnr
 config.window_decorations = "RESIZE"
 -- window background opacity
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.9
 -- window background blur
 config.macos_window_background_blur = 100
 -- no tab bar
 config.enable_tab_bar = false
 -- window padding
 config.window_padding = {
-	left = 10,
+	left = 5,
 	right = 5,
-	top = 0,
+	top = 10,
 	bottom = 0,
 }
 

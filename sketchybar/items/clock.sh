@@ -2,7 +2,7 @@
 
 COLOR="$MAGENTA"
 
-sketchybar --add item clock left \
+sketchybar --add item clock right \
 	--set clock update_freq=1 \
 	icon.padding_left=10 \
 	icon.color="$COLOR" \

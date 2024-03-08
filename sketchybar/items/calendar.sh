@@ -2,7 +2,7 @@
 
 COLOR="$BLUE"
 
-sketchybar --add item calendar left \
+sketchybar --add item calendar right \
 	--set calendar update_freq=15 \
 	icon.color="$COLOR" \
 	icon.padding_left=10 \

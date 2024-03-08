@@ -2,7 +2,7 @@
 
 COLOR="$CYAN"
 
-sketchybar --add item battery left \
+sketchybar --add item battery right \
 	--set battery \
 	update_freq=60 \
 	icon.color="$COLOR" \

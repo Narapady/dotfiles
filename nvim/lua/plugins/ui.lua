@@ -111,15 +111,15 @@ return {
             winbar = 1000,
           },
         },
-        sections = {},
         inactive_sections = {
           lualine_a = {},
           lualine_b = {},
-          lualine_c = { "filename" },
-          lualine_x = { "location" },
+          lualine_c = {},
+          lualine_x = {},
           lualine_y = {},
           lualine_z = {},
         },
+        sections = {},
         tabline = {},
         winbar = {
           lualine_c = {
@@ -134,7 +134,7 @@ return {
           },
           lualine_a = {
             { "mode", color = { fg = "#98bb6c", gui = "bold" } },
-            { "branch", color = { fg = "#E46876", gui = "bold" } },
+            { "branch", color = { fg = "#dcd7ba", gui = "bold" } },
             {
               "diff",
               colored = true, -- Displays a colored diff status if set to true

@@ -1,4 +1,31 @@
 layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="file:$HOME/.config/zellij/plugins/zjstatus.wasm" {
+        format_left "#[fg=#dcd7ba,bold]  #[fg=#e46876,bold]{command_git_branch} #[fg=#e82424,bold]{session} #[fg=#7e9cd8,bold]{swap_layout} {mode} {tabs}"
+        command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
+        command_git_branch_format      " #[fg=#e46876,bold]{stdout}"
+        command_git_branch_interval    "10"
+        command_git_branch_rendermode  "static"
+
+        mode_normal        "#[fg=#98bb6c,bold]NORMAL"
+        mode_locked        "#[fg=#6a9589,bold]LOCKED" 
+        mode_pane          "#[fg=#7e9cd8,bold]PANE"
+        mode_tab           "#[fg=#e82424,bold]TAB"
+        mode_scroll        "#[fg=#957fb8,bold]SCROLL"
+        mode_tmux          "#[fg=#ffa066,bold]TMUX"
+
+        tab_normal              "#[fg=#dcd7ba,bold]  "
+        tab_normal_fullscreen   "#[fg=#dcd7ba,bold]   "
+        tab_normal_sync         "#[fg=#dcd7ba,bold]   "
+
+        tab_active              "#[fg=#ffa066,bold] 󰋇  "
+        tab_active_fullscreen   "#[fg=#ffa066,bold] 󰋇   "
+        tab_active_sync         "#[fg=#ffa066,bold] 󰋇   "
+      }
+    }
+  }
   tab {
     pane
   }
@@ -42,33 +69,6 @@ layout {
             pane split_direction="vertical" { pane; pane; pane; pane; }
             pane split_direction="vertical" { pane; pane; pane; pane; }
         }
-    }
-  }
-  default_tab_template {
-    children
-    pane size=1 borderless=true {
-      plugin location="file:$HOME/.config/zellij/plugins/zjstatus.wasm" {
-        format_left " #[fg=#e46876,bold]{command_git_branch}#[fg=#e46876,bold]  #[fg=#dcd7ba,bold]#[fg=#1f1f28,bg=#dcd7ba,bold] {session} #[fg=#dcd7ba,bold] {mode}{tabs}"
-        command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
-        command_git_branch_format      " [fg=#1f1f28,bg=#e46876,bold] {stdout} "
-        command_git_branch_interval    "10"
-        command_git_branch_rendermode  "static"
-
-        mode_normal        " #[fg=#98bb6c,bold]#[fg=#1f1f28,bg=#98bb6c,bold]NORMAL#[fg=#98bb6c,bold] "
-        mode_locked        " #[fg=#6a9589,bold]#[fg=#1f1f28,bg=#6a9589,bold]LOCKED#[fg=#6a9589,bold] " 
-        mode_pane          " #[fg=#7e9cd8,bold]#[fg=#1f1f28,bg=#7e9cd8,bold]PANE#[fg=#7e9cd8,bold] "
-        mode_tab           " #[fg=#e82424,bold]#[fg=#1f1f28,bg=#e82424,bold]TAB#[fg=#e82424,bold] "
-        mode_scroll        " #[fg=#967fb8,bold]#[fg=#1f1f28,bg=#957fb8,bold]SCROLL#[fg=#967fb8,bold] "
-        mode_tmux          " #[fg=#ffa066,bold]#[fg=#1f1f28,bg=#ffa066,bold]TMUX#[fg=#ffa066,bold] "
-
-        tab_normal              " #[fg=#dcd7ba,bold]#[fg=#1f1f28,bg=#dcd7ba,bold]  #[fg=#dcd7ba,bold] "
-        tab_normal_fullscreen   " #[fg=#dcd7ba,bold]#[fg=#1f1f28,bg=#dcd7ba,bold]   #[fg=#dcd7ba,bold] "
-        tab_normal_sync         " #[fg=#dcd7ba,bold]#[fg=#1f1f28,fg=#dcd7ba,bold]   #[fg=#dcd7ba,bold] "
-
-        tab_active              " #[fg=#ffa066,bold]#[fg=#1f1f28,bg=#ffa066,bold]  #[fg=#ffa066,bold] "
-        tab_active_fullscreen   " #[fg=#ffa066,bold]#[fg=#1f1f28,bg=#ffa066,bold]   #[fg=#ffa066,bold] "
-        tab_active_sync         " #[fg=#ffa066,bold]#[fg=#1f1f28,bg=#ffa066,bold]   #[fg=#ffa066,bold] "
-      }
     }
   }
 }
