@@ -41,13 +41,13 @@ return {
           show_file = false,
         },
         ui = {
-          code_action = "", -- disable lightbulb
+          code_action = "",
         },
       })
     end,
     dependencies = {
-      "nvim-treesitter/nvim-treesitter", -- optional
-      "nvim-tree/nvim-web-devicons", -- optional
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
     },
   },
   {
@@ -122,40 +122,40 @@ return {
         sections = {},
         tabline = {},
         winbar = {
-          lualine_c = {
-            { "filetype", color = { fg = "#7fb4ca", gui = "bold" } },
-            { "filename", color = { fg = "#7fb4ca", gui = "bold" } },
-            {
-              function()
-                local breadcrum = require("lspsaga.symbol.winbar").get_bar()
-                return breadcrum
-              end,
-            },
+          lualine_b = {
+            -- { "branch", color = { fg = "#dcd7ba", gui = "bold" }, icon = "" },
+            { "filetype", color = { gui = "bold" }, icon_only = true, colored = true },
+            { "filename", color = { gui = "bold" } },
+            -- {
+            --   function()
+            --     local breadcrum = require("lspsaga.symbol.winbar").get_bar()
+            --     return breadcrum
+            --   end,
+            -- },
           },
-          lualine_a = {
-            { "mode", color = { fg = "#98bb6c", gui = "bold" } },
-            { "branch", color = { fg = "#dcd7ba", gui = "bold" } },
+          lualine_c = {
+            -- { "mode", color = { fg = "#98bb6c", gui = "bold" } },
             {
               "diff",
               colored = true, -- Displays a colored diff status if set to true
               diff_color = {
                 -- Same color values as the general color option can be used here.
-                added = { fg = "#98BB6C", gui = "bold" }, -- Changes the diff's added color
-                modified = { fg = "#ffa066", gui = "bold" }, -- Changes the diff's modified color
-                removed = { fg = "#E82424", gui = "bold" }, -- Changes the diff's removed color you
+                added = { gui = "bold" }, -- Changes the diff's added color
+                modified = { gui = "bold" }, -- Changes the diff's modified color
+                removed = { gui = "bold" }, -- Changes the diff's removed color you
               },
               symbols = { added = " ", modified = " ", removed = " " }, -- Changes the symbols used by the diff.
             },
             {
               "diagnostics",
               sources = { "nvim_diagnostic" },
-              symbols = { error = " ", warn = " ", info = " " },
+              symbols = { error = " ", warn = " ", info = " ", hint = " " },
             },
           },
-          lualine_b = {
-            { "location", color = { fg = "#7fb4ca", gui = "bold" } },
-            { "progress", color = { fg = "#957fb8", gui = "bold" } },
-            { "copilot", color = { fg = "#ffa066", gui = "bold" } },
+          lualine_a = {
+            -- { "location", color = { fg = "#7fb4ca", gui = "bold" } },
+            -- { "progress", color = { fg = "#957fb8", gui = "bold" } },
+            { "copilot", color = { fg = "#D08770", gui = "bold" } },
             {
               function()
                 local msg = "No Active Lsp"
@@ -172,8 +172,8 @@ return {
                 end
                 return msg
               end,
-              icon = ":",
-              color = { fg = "#E46876", gui = "bold" },
+              icon = "",
+              color = { fg = "#8FBCBB", gui = "bold" },
             },
           },
         },

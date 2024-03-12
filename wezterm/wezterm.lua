@@ -1,6 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-local colors = require("lua/kanagawa").colors()
+local colors = require("lua/nord").colors()
 -- This table will hold the configuration.
 local config = {}
 
@@ -11,7 +11,7 @@ if wezterm.config_builder then
 end
 
 -- font
-config.font = wezterm.font("SauceCodePro Nerd Font", { weight = "Regular" })
+config.font = wezterm.font("JetBrains Mono", { weight = "Regular" })
 -- font size
 config.font_size = 15
 -- colorscheme
@@ -21,11 +21,11 @@ config.colors = colors
 -- 	{
 -- 		source = {
 -- 			File = {
--- 				path = "/Users/narapadychhuoy/Documents/wallpaper/devain/Wezterm Blue.gif",
+-- 				path = "/Users/narapadychhuoy/Documents/wallpaper/Groot wallpaper.png",
 -- 				speed = 0.2,
 -- 			},
 -- 		},
--- 		hsb = { brightness = 0.1 },
+-- 		hsb = { brightness = 1 },
 -- 		vertical_align = "Middle",
 -- 		opacity = 0.9,
 -- 		height = "Cover",
@@ -35,7 +35,7 @@ config.colors = colors
 -- high window baggVGnr
 config.window_decorations = "RESIZE"
 -- window background opacity
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.5
 -- window background blur
 config.macos_window_background_blur = 100
 -- no tab bar

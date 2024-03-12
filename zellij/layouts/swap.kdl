@@ -3,26 +3,26 @@ layout {
     children
     pane size=1 borderless=true {
       plugin location="file:$HOME/.config/zellij/plugins/zjstatus.wasm" {
-        format_left "#[fg=#dcd7ba,bold]  #[fg=#e46876,bold]{command_git_branch} #[fg=#e82424,bold]{session} #[fg=#7e9cd8,bold]{swap_layout} {mode} {tabs}"
+        format_left "#[fg=#D8DEE9,bold]  #[fg=#8FBCBB,bold]{command_git_branch} #[fg=#BF616A,bold] {session} #[fg=#81A1C1,bold]{swap_layout} {mode} {tabs}"
         command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
-        command_git_branch_format      " #[fg=#e46876,bold]{stdout}"
+        command_git_branch_format      " #[fg=#8FBCBB,bold]{stdout}"
         command_git_branch_interval    "10"
         command_git_branch_rendermode  "static"
 
-        mode_normal        "#[fg=#98bb6c,bold]NORMAL"
-        mode_locked        "#[fg=#6a9589,bold]LOCKED" 
-        mode_pane          "#[fg=#7e9cd8,bold]PANE"
-        mode_tab           "#[fg=#e82424,bold]TAB"
-        mode_scroll        "#[fg=#957fb8,bold]SCROLL"
-        mode_tmux          "#[fg=#ffa066,bold]TMUX"
+        mode_normal        "#[fg=#A3BE8C,bold]󰿆"
+        mode_locked        "#[fg=#8FBCBB,bold]" 
+        mode_pane          "#[fg=#81A1C1,bold]"
+        mode_tab           "#[fg=#BF616A,bold]"
+        mode_scroll        "#[fg=#B48EAD,bold]"
+        mode_tmux          "#[fg=#D08770,bold]󰬛"
 
-        tab_normal              "#[fg=#dcd7ba,bold]  "
-        tab_normal_fullscreen   "#[fg=#dcd7ba,bold]   "
-        tab_normal_sync         "#[fg=#dcd7ba,bold]   "
+        tab_normal              "#[fg=#D8DEE9,bold]  "
+        tab_normal_fullscreen   "#[fg=#D8DEE9,bold]   "
+        tab_normal_sync         "#[fg=#D8DEE9,bold]   "
 
-        tab_active              "#[fg=#ffa066,bold] 󰋇  "
-        tab_active_fullscreen   "#[fg=#ffa066,bold] 󰋇   "
-        tab_active_sync         "#[fg=#ffa066,bold] 󰋇   "
+        tab_active              "#[fg=#D08770,bold]  "
+        tab_active_fullscreen   "#[fg=#D08770,bold]   "
+        tab_active_sync         "#[fg=#D08770,bold]   "
       }
     }
   }
@@ -72,4 +72,3 @@ layout {
     }
   }
 }
-

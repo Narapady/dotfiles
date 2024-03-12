@@ -160,7 +160,7 @@ keybinds clear-defaults=true {
     }
     tmux {
         bind "[" { SwitchToMode "Scroll"; }
-        bind "Ctrl b" { Write 2; SwitchToMode "Normal"; }
+        bind "Ctrl a" { SwitchToMode "Normal"; }
         bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "%" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
@@ -210,7 +210,7 @@ ui {
     }
 }
 auto_layout true
-theme "kanagawa"
+theme "nord"
 default_layout "default"
 mouse_mode true
 copy_command "pbcopy"                     // osx

@@ -5,7 +5,7 @@ return {
     lazy = true,
     opts = function()
       return {
-        transparent = true,
+        transparent = false,
         styles = {
           sidebars = "transparent",
           floats = "transparent",
@@ -31,7 +31,7 @@ return {
           light = "latte",
           dark = "mocha",
         },
-        transparent_background = true, -- disables setting the background color.
+        transparent_background = false, -- disables setting the background color.
         show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
         styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
           comments = { "italic" }, -- Change the style of comments
@@ -123,6 +123,20 @@ return {
     priority = 1000,
   },
   {
+    "shaunsingh/nord.nvim",
+    lazy = true,
+    priority = 1000,
+    config = function()
+      vim.g.nord_contrast = false
+      vim.g.nord_borders = false
+      vim.g.nord_disable_background = false
+      vim.g.nord_italic = false
+      vim.g.nord_uniform_diff_background = true
+      vim.g.nord_bold = false
+      require("nord").set()
+    end,
+  },
+  {
     "Mofiqul/dracula.nvim",
     lazy = true,
     priority = 1000,
@@ -144,6 +158,7 @@ return {
   },
   {
     "folke/styler.nvim",
+    priority = 1000,
     config = function()
       require("styler").setup({
         themes = {
@@ -155,7 +170,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa",
+      colorscheme = "nord",
     },
   },
 }

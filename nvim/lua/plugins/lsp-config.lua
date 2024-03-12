@@ -1,3 +1,9 @@
+local signs = { Error = "", Warn = "", Hint = "", Info = "" }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+
 return {
   "neovim/nvim-lspconfig",
   init = function()
@@ -27,17 +33,6 @@ return {
           },
         },
       },
-      ruff_lsp = {},
-    },
-    setup = {
-      ruff_lsp = function()
-        require("lazyvim.util").lsp.on_attach(function(client, _)
-          if client.name == "ruff_lsp" then
-            -- Disable hover in favor of Pyright
-            client.server_capabilities.hoverProvider = false
-          end
-        end)
-      end,
     },
   },
 }

@@ -1,12 +1,12 @@
 format = """
-[╭─](fg:#FFA066 bg:#00000000)[ 󱓟 ](fg:#FFA066 bg:#00000000)\
-[narapady@Mac](fg:#98BB6C bg:#00000000)\
+[╭─](fg:#D08770 bg:#00000000)[ 󱓟 ](fg:#D08770 bg:#00000000)\
+[narapady@Mac](bold fg:#8FBCBB bg:#00000000)\
 $directory\
 $git_branch\
 $git_status\
 $docker_context\
 $cmd_duration$status\
-\n[╰─](fg:#FFA066 bg:#00000000)$character
+\n[╰─](fg:#D08770 bg:#00000000)$character
 """
 # Disable the blank line at the start of the prompt
 add_newline = false
@@ -15,26 +15,26 @@ add_newline = false
 # and use the os module below
 [username]
 show_always = true
-style_user = "fg:#7E9CD8 bg:#00000000"
+style_user = "fg:#88C0D0 bg:#00000000"
 style_root = "fg:white bg:#00000000"
 format = '[$user]($style)'
 disabled = false
 
 [status]
 style = 'bg:#00000000'
-symbol = '[✘ ](fg:red bg:#00000000)'
+symbol = '[✘ ](fg:#BF616A bg:#00000000)'
 success_symbol = '[󰗡 ](fg:green bg:#00000000)'
-format = '[[$signal_name ](fg:red bg:#00000000)$symbol]($style)'
+format = '[[$signal_name ](fg:#BF616A bg:#00000000)$symbol]($style)'
 map_symbol = false
 disabled = false
 
 [character]
-success_symbol = '[](fg:#FFA066 bg:#00000000)'
-error_symbol = '[✘](fg:red)'
+success_symbol = '[](fg:#D08770 bg:#00000000)'
+error_symbol = '[✘](fg:#BF616A)'
 
 [cmd_duration]
 min_time = 1
-style = 'bg:#00000000 fg:#E82424'
+style = 'bold bg:#00000000 fg:#BF616A'
 format = '[ took [$duration](bold fg:#dcd7ba bg:#00000000)  ]($style)'
 
 [hostname]
@@ -50,48 +50,48 @@ style = "bg:#00000000"
 disabled = true # Disabled by default
 
 [directory]
-style = "fg:#e82424 bg:#00000000"
+style = "bold fg:#BF616A bg:#00000000"
 format = "[  $path]($style)"
 truncation_length = 9
-# truncation_symbol = " …/"
+truncation_symbol = " …/"
 truncate_to_repo = true
 home_symbol = '~'
 
 [docker_context]
-symbol = " "
-style = "bg:#00000000"
+symbol = "󰡨"
+style = "(fg:#88C0D0 bg:#00000000)"
 format = '[ $symbol $context ]($style) $path'
 
 [git_branch]
-style = "fg:#dcd7ba bg:#00000000"
-format = '[  ](fg:#dcd7ba bg:#00000000)[$branch ](bold $style)'
+style = "fg:#D8DEE9 bg:#00000000"
+format = '[  ](fg:#D8DEE9 bg:#00000000)[$branch ](bold $style)'
 truncation_length = 15
 
 [git_status]
 style = "fg:#957fb8 bg:#00000000"
 conflicted = "~"
-up_to_date =  '[ 󱓎 ](fg:#6a9589 bg:#00000000)'
+up_to_date =  '[ 󱓎 ](fg:#8FBCBB bg:#00000000)'
 untracked = "[  ${count}](fg:#7E9cd8 bg:#00000000)"
-ahead = "[  ${count}](fg:#6a9589 bg:#00000000)"
+ahead = "[  ${count}](fg:#8FBCBB bg:#00000000)"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-behind = "[ ${count}](fg:#6a9589 bg:#00000000)"
+behind = "[ ${count}](fg:#8FBCBB bg:#00000000)"
 stashed = "*"
-modified = '[ $count ](fg:#ffa066 bg:#00000000)'
-staged = '[ $count](fg:#98BB6C bg:#00000000)'
+modified = '[ $count ](fg:#D08770 bg:#00000000)'
+staged = '[ $count](fg:#A3BE8C bg:#00000000)'
 renamed = " "
-deleted = "[ ${count} ](fg:#E82424 bg:#00000000)"
-format = '[$all_status$ahead_behind]($style)'
+deleted = "[ ${count} ](fg:#BF616A bg:#00000000)"
+format = '[$all_status$ahead_behind](bold $style)'
 # format = '[$modified]()[$untracked]()[$ahead_behind]()[$staged]()[$deleted]()'
 
 [python]
 python_binary = ["./venv/bin/python", "./.venv/bin/python", "python3", "python", "python2"]
 symbol = ' '
+pyenv_version_name = true
 style = "fg:#7aa89f bg:#00000000"
 format = '[ $symbol ]($style)'
-
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#00000000 fg:#E82424"
+style = "bold bg:#00000000 fg:#BF616A"
 format = '[$time ]($style)'

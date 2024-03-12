@@ -60,4 +60,8 @@ return {
     event = "VeryLazy",
     config = true,
   },
+  {
+    "imsnif/kdl.vim",
+    ft = "kdl",
+  },
 }
