@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COLOR="$PINK"
+COLOR="$CYAN"
 
 sketchybar --add item cpu right \
 	--set cpu \

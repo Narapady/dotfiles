@@ -3,26 +3,26 @@ layout {
     children
     pane size=1 borderless=true {
       plugin location="file:$HOME/.config/zellij/plugins/zjstatus.wasm" {
-        format_left "#[fg=#D8DEE9,bold]  #[fg=#8FBCBB,bold]{command_git_branch} #[fg=#BF616A,bold] {session} #[fg=#81A1C1,bold]{swap_layout} {mode} {tabs}"
+        format_left "#[fg=#2E3440,bg=#8FBCBB,bold]  #[fg=#2E3440,bg=#8FBCBB,bold]{command_git_branch} #[fg=#2E3440,bg=#8FBCBB,bold]({session})#[fg=#2E3440,bg=#8FBCBB,bold]{swap_layout} {mode}{tabs}"
         command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
         command_git_branch_format      " #[fg=#8FBCBB,bold]{stdout}"
         command_git_branch_interval    "10"
-        command_git_branch_rendermode  "static"
+        command_git_branch_rendermode  "dynamic"
 
-        mode_normal        "#[fg=#A3BE8C,bold]󰿆"
-        mode_locked        "#[fg=#8FBCBB,bold]" 
-        mode_pane          "#[fg=#81A1C1,bold]"
-        mode_tab           "#[fg=#BF616A,bold]"
-        mode_scroll        "#[fg=#B48EAD,bold]"
-        mode_tmux          "#[fg=#D08770,bold]󰬛"
+        mode_normal        "#[fg=#2e3440,bg=#8FBCBB,bold] NORMAL "
+        mode_locked        "#[fg=#2e3440,bg=#A3BE8C,bold] LOCKED " 
+        mode_pane          "#[fg=#2e3440,bg=#81A1C1,bold] PANE "
+        mode_tab           "#[fg=#2e3440,bg=#BF616A,bold] TAB "
+        mode_scroll        "#[fg=#2e3440,bg=#B48EAD,bold] SEARCH "
+        mode_tmux          "#[fg=#2e3440,bg=#D08770,bold] TMUX "
 
-        tab_normal              "#[fg=#D8DEE9,bold]  "
-        tab_normal_fullscreen   "#[fg=#D8DEE9,bold]   "
-        tab_normal_sync         "#[fg=#D8DEE9,bold]   "
+        tab_normal              "#[fg=#2e3440,bg=#8FBCBB,bold]  "
+        tab_normal_fullscreen   "#[fg=#2e3440,bg=#8FBCBB,bold]   "
+        tab_normal_sync         "#[fg=#2e3440,bg=#8FBCBB,bold]   "
 
-        tab_active              "#[fg=#D08770,bold]  "
-        tab_active_fullscreen   "#[fg=#D08770,bold]   "
-        tab_active_sync         "#[fg=#D08770,bold]   "
+        tab_active              "#[fg=#2e3440,bg=#8FBCBB,bold]   "
+        tab_active_fullscreen   "#[fg=#2e3440,bg=#8FBCBB,bold]    "
+        tab_active_sync         "#[fg=#2e3440,bg=#8FBCBB,bold]    "
       }
     }
   }

@@ -14,7 +14,7 @@ weather=(
 	mouse.exited.global
 )
 
-COLOR="$PINK"
+COLOR="$CYAN"
 
 sketchybar --add item weather right \
 	--set weather "${weather[@]}" \

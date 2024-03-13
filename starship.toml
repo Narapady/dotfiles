@@ -1,12 +1,11 @@
 format = """
-[╭─](fg:#D08770 bg:#00000000)[ 󱓟 ](fg:#D08770 bg:#00000000)\
-[narapady@Mac](bold fg:#8FBCBB bg:#00000000)\
+[╭─](fg:#88C0D0 bg:#00000000)[ 󱓟 ](fg:#88C0D0 bg:#00000000)\
 $directory\
 $git_branch\
 $git_status\
 $docker_context\
 $cmd_duration$status\
-\n[╰─](fg:#D08770 bg:#00000000)$character
+\n[╰─](fg:#88C0D0 bg:#00000000)$character
 """
 # Disable the blank line at the start of the prompt
 add_newline = false
@@ -29,13 +28,13 @@ map_symbol = false
 disabled = false
 
 [character]
-success_symbol = '[](fg:#D08770 bg:#00000000)'
+success_symbol = '[](fg:#88C0D0 bg:#00000000)'
 error_symbol = '[✘](fg:#BF616A)'
 
 [cmd_duration]
 min_time = 1
 style = 'bold bg:#00000000 fg:#BF616A'
-format = '[ took [$duration](bold fg:#dcd7ba bg:#00000000)  ]($style)'
+format = '[ [$duration](bold fg:#D8DEE9 bg:#00000000)]($style)'
 
 [hostname]
 ssh_only = false
@@ -50,8 +49,8 @@ style = "bg:#00000000"
 disabled = true # Disabled by default
 
 [directory]
-style = "bold fg:#BF616A bg:#00000000"
-format = "[  $path]($style)"
+style = "bold fg:#88C0D0 bg:#00000000"
+format = "[$path]($style)"
 truncation_length = 9
 truncation_symbol = " …/"
 truncate_to_repo = true
@@ -64,7 +63,7 @@ format = '[ $symbol $context ]($style) $path'
 
 [git_branch]
 style = "fg:#D8DEE9 bg:#00000000"
-format = '[  ](fg:#D8DEE9 bg:#00000000)[$branch ](bold $style)'
+format = '[  ](fg:#D8DEE9 bg:#00000000)[$branch ](bold $style)'
 truncation_length = 15
 
 [git_status]

@@ -94,7 +94,7 @@ return {
         options = {
           icons_enabled = true,
           theme = {
-            normal = { c = { fg = "#ffa066", bg = "#0000000" } },
+            normal = { c = { fg = "#2E3440", bg = "#2E3440" } },
           },
           component_separators = { left = "", right = "" },
           section_separators = { left = "", right = "" },
@@ -149,7 +149,7 @@ return {
             {
               "diagnostics",
               sources = { "nvim_diagnostic" },
-              symbols = { error = " ", warn = " ", info = " ", hint = " " },
+              symbols = { error = " ", warn = " ", info = " " },
             },
           },
           lualine_a = {

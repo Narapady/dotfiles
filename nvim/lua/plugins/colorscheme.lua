@@ -118,11 +118,6 @@ return {
     end,
   },
   {
-    "Mofiqul/vscode.nvim",
-    lazy = true,
-    priority = 1000,
-  },
-  {
     "shaunsingh/nord.nvim",
     lazy = true,
     priority = 1000,
@@ -135,11 +130,6 @@ return {
       vim.g.nord_bold = false
       require("nord").set()
     end,
-  },
-  {
-    "Mofiqul/dracula.nvim",
-    lazy = true,
-    priority = 1000,
   },
   {
     "EdenEast/nightfox.nvim",

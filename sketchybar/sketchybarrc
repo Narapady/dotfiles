@@ -5,7 +5,7 @@ source "$HOME/.config/sketchybar/variables.sh" # Loads all defined colors
 sketchybar --bar height=26 \
 	color="$BLACK" \
 	shadow="$SHADOW" \
-	position=bottom \
+	position=top \
 	sticky=on \
 	padding_right=0 \
 	padding_left=3 \
