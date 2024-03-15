@@ -66,12 +66,12 @@ return {
     event = "LazyFile",
     opts = {
       signs = {
-        add = { text = " " },
-        change = { text = "  " },
-        delete = { text = " " },
-        topdelete = { text = " " },
-        changedelete = { text = "  " },
-        untracked = { text = "▎" },
+        add = { text = "+" },
+        change = { text = "~" },
+        delete = { text = "-" },
+        topdelete = { text = "-" },
+        changedelete = { text = "-" },
+        untracked = { text = "?" },
       },
       on_attach = function(buffer)
         local gs = package.loaded.gitsigns
@@ -94,7 +94,7 @@ return {
         options = {
           icons_enabled = true,
           theme = {
-            normal = { c = { fg = "#2E3440", bg = "#2E3440" } },
+            normal = { c = { fg = "#00000000", bg = "#00000000" } },
           },
           component_separators = { left = "", right = "" },
           section_separators = { left = "", right = "" },
@@ -122,6 +122,7 @@ return {
         sections = {},
         tabline = {},
         winbar = {
+          lualine_a = {},
           lualine_b = {
             -- { "branch", color = { fg = "#dcd7ba", gui = "bold" }, icon = "" },
             { "filetype", color = { gui = "bold" }, icon_only = true, colored = true },
@@ -134,7 +135,6 @@ return {
             -- },
           },
           lualine_c = {
-            -- { "mode", color = { fg = "#98bb6c", gui = "bold" } },
             {
               "diff",
               colored = true, -- Displays a colored diff status if set to true
@@ -144,7 +144,7 @@ return {
                 modified = { gui = "bold" }, -- Changes the diff's modified color
                 removed = { gui = "bold" }, -- Changes the diff's removed color you
               },
-              symbols = { added = " ", modified = " ", removed = " " }, -- Changes the symbols used by the diff.
+              symbols = { added = "+", modified = "~", removed = "-" }, -- Changes the symbols used by the diff.
             },
             {
               "diagnostics",
@@ -152,10 +152,13 @@ return {
               symbols = { error = " ", warn = " ", info = " " },
             },
           },
-          lualine_a = {
-            -- { "location", color = { fg = "#7fb4ca", gui = "bold" } },
-            -- { "progress", color = { fg = "#957fb8", gui = "bold" } },
-            { "copilot", color = { fg = "#D08770", gui = "bold" } },
+          lualine_x = {
+            { "mode", color = { fg = "#8FBCBB", gui = "bold" } },
+            { "location", color = { fg = "#8FBCBB", gui = "bold" } },
+            { "progress", color = { fg = "#8FBCBB", gui = "bold" } },
+          },
+          lualine_y = {
+            { "copilot", color = { fg = "#8FBCBB", gui = "bold" } },
             {
               function()
                 local msg = "No Active Lsp"
@@ -176,6 +179,7 @@ return {
               color = { fg = "#8FBCBB", gui = "bold" },
             },
           },
+          lualine_z = {},
         },
         inactive_winbar = {},
         extensions = {},

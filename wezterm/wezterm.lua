@@ -11,7 +11,7 @@ if wezterm.config_builder then
 end
 
 -- font
-config.font = wezterm.font("JetBrains Mono", { weight = "Regular" })
+config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
 -- font size
 config.font_size = 15
 -- colorscheme
@@ -21,7 +21,7 @@ config.colors = colors
 -- 	{
 -- 		source = {
 -- 			File = {
--- 				path = "/Users/narapadychhuoy/Documents/wallpaper/Groot wallpaper.png",
+-- 				path = "/Users/narapadychhuoy/Documents/wallpaper/Nord/Groot wallpaper.png",
 -- 				speed = 0.2,
 -- 			},
 -- 		},
@@ -35,17 +35,17 @@ config.colors = colors
 -- high window baggVGnr
 config.window_decorations = "RESIZE"
 -- window background opacity
-config.window_background_opacity = 0.5
+config.window_background_opacity = 0.75
 -- window background blur
 config.macos_window_background_blur = 100
 -- no tab bar
 config.enable_tab_bar = false
 -- window padding
 config.window_padding = {
-	left = 5,
-	right = 5,
-	top = 10,
-	bottom = 0,
+	left = 3,
+	right = 3,
+	top = 2,
+	bottom = 5,
 }
 
 -- return the configuration to wezterm

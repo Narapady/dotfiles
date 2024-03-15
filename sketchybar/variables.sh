@@ -25,7 +25,7 @@ LABEL_COLOR=$WHITE # Color of all labels
 ITEM_DIR="$HOME/.config/sketchybar/items"
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 
-FONT="SauceCodePro Nerd Font"
+FONT="JetBrainsMono Nerd Font"
 
 PADDINGS=3
 
