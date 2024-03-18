@@ -93,7 +93,7 @@ return {
       },
       --  findd commands
       {
-        ";x",
+        ";c",
         function()
           local builtin = require("telescope.builtin")
           builtin.commands()

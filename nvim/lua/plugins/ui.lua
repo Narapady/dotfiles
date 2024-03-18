@@ -5,17 +5,63 @@ return {
     lazy = false,
     keys = { "<leader>T", "<cmd>TransparentToggle<CR>", desc = "Toggle Transparent" },
   },
-
-  -- Preview markdown
+  -- Incremental rename
   {
-    "toppair/peek.nvim",
-    event = { "VeryLazy" },
-    build = "deno task --quiet build:fast",
-    config = function()
-      require("peek").setup()
-      -- refer to `configuration to change defaults`
-      vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-      vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+    "smjonas/inc-rename.nvim",
+    cmd = "IncRename",
+    config = true,
+  },
+
+  {
+    "folke/noice.nvim",
+    opts = function(_, opts)
+      table.insert(opts.routes, {
+        filter = {
+          event = "notify",
+          find = "No information available",
+        },
+        opts = { skip = true },
+      })
+      local focused = true
+      vim.api.nvim_create_autocmd("FocusGained", {
+        callback = function()
+          focused = true
+        end,
+      })
+      vim.api.nvim_create_autocmd("FocusLost", {
+        callback = function()
+          focused = false
+        end,
+      })
+      table.insert(opts.routes, 1, {
+        filter = {
+          cond = function()
+            return not focused
+          end,
+        },
+        view = "notify_send",
+        opts = { stop = false },
+      })
+
+      opts.commands = {
+        all = {
+          -- options for the message history that you get with `:Noice`
+          view = "split",
+          opts = { enter = true, format = "details" },
+          filter = {},
+        },
+      }
+
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = "markdown",
+        callback = function(event)
+          vim.schedule(function()
+            require("noice.text.markdown").keys(event.buf)
+          end)
+        end,
+      })
+
+      opts.presets.lsp_doc_border = true
     end,
   },
   -- config notify.nvim
@@ -29,28 +75,6 @@ return {
     end,
   },
   {
-    "nvimdev/lspsaga.nvim",
-    event = "BufReadPre",
-    keys = {
-      { "<leader>ol", "<cmd>Lspsaga outline<CR>", desc = "Show Outline" },
-    },
-    config = function()
-      require("lspsaga").setup({
-        symbol_in_winbar = {
-          enable = false,
-          show_file = false,
-        },
-        ui = {
-          code_action = "",
-        },
-      })
-    end,
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-    },
-  },
-  {
     "DreamMaoMao/yazi.nvim",
     dependencies = {
       "nvim-telescope/telescope.nvim",
@@ -59,30 +83,6 @@ return {
 
     keys = {
       { ";e", "<cmd>Yazi<CR>", desc = "Toggle Yazi" },
-    },
-  },
-  {
-    "lewis6991/gitsigns.nvim",
-    event = "LazyFile",
-    opts = {
-      signs = {
-        add = { text = "+" },
-        change = { text = "~" },
-        delete = { text = "-" },
-        topdelete = { text = "-" },
-        changedelete = { text = "-" },
-        untracked = { text = "?" },
-      },
-      on_attach = function(buffer)
-        local gs = package.loaded.gitsigns
-
-        local function map(mode, l, r, desc)
-          vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
-        end
-
-      -- stylua: ignore start
-      map("n", ";h", gs.preview_hunk_inline, "Preview Hunk Inline")
-      end,
     },
   },
   {

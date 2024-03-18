@@ -26,9 +26,6 @@ local handler = function(virtText, lnum, endLnum, width, truncate)
   return newVirtText
 end
 
--- global handler
--- `handler` is the 2nd parameter of `setFoldVirtTextHandler`,
--- check out `./lua/ufo.lua` and search `setFoldVirtTextHandler` for detail.
 return {
   "kevinhwang91/nvim-ufo",
   event = "BufRead",
@@ -39,8 +36,3 @@ return {
     })
   end,
 }
-
--- buffer scope handler
--- will override global handler if it is existed
--- local bufnr = vim.api.nvim_get_current_buf()
--- require('ufo').setFoldVirtTextHandler(bufnr, handler)

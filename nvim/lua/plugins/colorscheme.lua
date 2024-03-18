@@ -117,7 +117,6 @@ return {
       })
     end,
   },
-  { "nordtheme/vim", lazy = true, priority = 1000, name = "nord" },
   {
     "EdenEast/nightfox.nvim",
     lazy = true,
@@ -147,7 +146,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nord",
+      colorscheme = "nordfox",
     },
   },
 }

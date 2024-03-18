@@ -1,6 +1,3 @@
--- Autocmds are automatically loaded on the VeryLazy event
--- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
--- Add any additional autocmds here
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
   callback = function()
     vim.cmd("set formatoptions-=cro")
@@ -71,8 +68,6 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
       return
     end
     if luasnip.expand_or_jumpable() then
-      -- ask maintainer for option to make this silent
-      -- luasnip.unlink_current()
       vim.cmd([[silent! lua require("luasnip").unlink_current()]])
     end
   end,

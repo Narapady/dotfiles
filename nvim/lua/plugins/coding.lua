@@ -20,7 +20,7 @@ return {
     keys = {
       { "<leader>bD", false },
       {
-        ";c",
+        ";x",
         function()
           local bd = require("mini.bufremove").delete
           if vim.bo.modified then
@@ -54,11 +54,6 @@ return {
     config = function()
       require("neoscroll").setup({})
     end,
-  },
-  {
-    "sindrets/diffview.nvim",
-    event = "VeryLazy",
-    config = true,
   },
   {
     "imsnif/kdl.vim",

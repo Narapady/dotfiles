@@ -1,5 +1,4 @@
 return {
-  -- custom config which piggybacks on the copilot extras in lazy.lua.
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
