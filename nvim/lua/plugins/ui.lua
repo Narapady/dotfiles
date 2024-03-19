@@ -11,7 +11,6 @@ return {
     cmd = "IncRename",
     config = true,
   },
-
   {
     "folke/noice.nvim",
     opts = function(_, opts)
@@ -64,7 +63,6 @@ return {
       opts.presets.lsp_doc_border = true
     end,
   },
-  -- config notify.nvim
   {
     "rcarriga/nvim-notify",
     event = "BufRead",
@@ -87,7 +85,8 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons", "AndreM222/copilot-lualine", "nvimdev/lspsaga.nvim" },
+    enabled = false,
+    dependencies = { "nvim-tree/nvim-web-devicons", "AndreM222/copilot-lualine" },
     opts = {},
     config = function()
       require("lualine").setup({
@@ -111,7 +110,7 @@ return {
             winbar = 1000,
           },
         },
-        inactive_sections = {
+        inactive_winbar = {
           lualine_a = {},
           lualine_b = {},
           lualine_c = {},
@@ -119,22 +118,15 @@ return {
           lualine_y = {},
           lualine_z = {},
         },
-        sections = {},
+        winbar = {},
         tabline = {},
-        winbar = {
+        sections = {
           lualine_a = {},
-          lualine_b = {
-            -- { "branch", color = { fg = "#dcd7ba", gui = "bold" }, icon = "" },
+          lualine_b = {},
+          lualine_c = {},
+          lualine_x = {
             { "filetype", color = { gui = "bold" }, icon_only = true, colored = true },
             { "filename", color = { gui = "bold" } },
-            -- {
-            --   function()
-            --     local breadcrum = require("lspsaga.symbol.winbar").get_bar()
-            --     return breadcrum
-            --   end,
-            -- },
-          },
-          lualine_c = {
             {
               "diff",
               colored = true, -- Displays a colored diff status if set to true
@@ -152,12 +144,12 @@ return {
               symbols = { error = " ", warn = " ", info = " " },
             },
           },
-          lualine_x = {
+          lualine_y = {
             { "mode", color = { fg = "#8FBCBB", gui = "bold" } },
             { "location", color = { fg = "#8FBCBB", gui = "bold" } },
             { "progress", color = { fg = "#8FBCBB", gui = "bold" } },
           },
-          lualine_y = {
+          lualine_z = {
             { "copilot", color = { fg = "#8FBCBB", gui = "bold" } },
             {
               function()
@@ -179,9 +171,13 @@ return {
               color = { fg = "#8FBCBB", gui = "bold" },
             },
           },
-          lualine_z = {},
         },
-        inactive_winbar = {},
+        inactive_sections = {
+          lualine_a = {
+            { "filetype", color = { gui = "bold" }, icon_only = true, colored = true },
+            { "filename", color = { gui = "bold" } },
+          },
+        },
         extensions = {},
       })
     end,

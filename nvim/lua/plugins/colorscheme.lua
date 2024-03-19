@@ -76,11 +76,6 @@ return {
     end,
   },
   {
-    "sainnhe/gruvbox-material",
-    lazy = true,
-    priority = 1000,
-  },
-  {
     "rose-pine/neovim",
     name = "rose-pine",
     lazy = true,
@@ -121,6 +116,12 @@ return {
     "EdenEast/nightfox.nvim",
     lazy = true,
     priority = 1000,
+  },
+  {
+    "ellisonleao/gruvbox.nvim",
+    lazy = true,
+    priority = 1000,
+    config = true,
   },
   {
     "navarasu/onedark.nvim",
