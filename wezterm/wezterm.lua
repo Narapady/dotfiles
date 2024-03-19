@@ -42,10 +42,10 @@ config.macos_window_background_blur = 100
 config.enable_tab_bar = false
 -- window padding
 config.window_padding = {
-	left = 3,
-	right = 3,
-	top = 2,
-	bottom = 5,
+	left = 10,
+	right = 10,
+	top = 5,
+	bottom = 10,
 }
 
 -- return the configuration to wezterm
