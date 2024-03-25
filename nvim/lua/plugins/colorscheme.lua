@@ -113,6 +113,21 @@ return {
     end,
   },
   {
+    "shaunsingh/nord.nvim",
+    lazy = true,
+    priority = 1000,
+    config = function()
+      vim.g.nord_contrast = false
+      vim.g.nord_borders = false
+      vim.g.nord_disable_background = false
+      vim.g.nord_italic = false
+      vim.g.nord_uniform_diff_background = true
+      vim.g.nord_bold = false
+      require("nord").set()
+    end,
+  },
+
+  {
     "EdenEast/nightfox.nvim",
     lazy = true,
     priority = 1000,
@@ -129,8 +144,16 @@ return {
     priority = 1000,
     config = function()
       require("onedark").setup({
-        style = "deep", -- deep, darker, cool, warm, warmer
+        style = "cool", -- deep, darker, cool, warm, warmer
       })
+    end,
+  },
+  {
+    "neanias/everforest-nvim",
+    lazy = true,
+    priority = 1000,
+    config = function()
+      require("everforest").setup()
     end,
   },
   {
@@ -147,7 +170,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nordfox",
+      colorscheme = "onedark",
     },
   },
 }

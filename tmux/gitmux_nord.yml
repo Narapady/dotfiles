@@ -1,6 +1,6 @@
 tmux:
   symbols:
-    branch: " "
+    branch: " "
     hashprefix: ":"
     ahead: " "
     behind: " "
@@ -19,7 +19,7 @@ tmux:
     insertions: "#[fg=#A3BE8C,nobold]"
     deletions: "#[fg=#BF616A,nobold]"
     conflict: "#[fg=#BF616A,nobold]"
-    modified: "#[fg=#EBCB8B,nobold]"
+    modified: "#[fg=#B48EAD,nobold]"
     untracked: "#[fg=#88C0D0,nobold]"
     stashed: "#[fg=#B48EAD,nonobold]"
     clean: "#[fg=#8FBCBB,nobold]"

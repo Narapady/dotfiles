@@ -12,7 +12,7 @@ sketchybar --add item battery right \
 	background.height=26 \
 	background.padding_left=0 \
 	background.padding_right=0 \
-	background.color="$TRANSPARENT" \
+	background.color="$BLACK" \
 	background.drawing=on \
 	script="$PLUGIN_DIR/power.sh" \
 	--subscribe battery power_source_change

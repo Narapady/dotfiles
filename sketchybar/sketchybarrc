@@ -2,16 +2,16 @@
 
 source "$HOME/.config/sketchybar/variables.sh" # Loads all defined colors
 
-sketchybar --bar height=26 \
-	color="$BLACK" \
+sketchybar --bar height=23 \
+	color="$TRANSPARENT" \
 	shadow="$SHADOW" \
 	position=top \
 	sticky=on \
 	padding_right=0 \
 	padding_left=3 \
 	corner_radius="$CORNER_RADIUS" \
-	y_offset=0 \
-	margin=10 \
+	y_offset=25 \
+	margin=120 \
 	blur_radius=20 \
 	notch_width=200 \
 	--default updates=when_shown \
@@ -36,7 +36,7 @@ source "$ITEM_DIR/clock.sh"
 source "$ITEM_DIR/calendar.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/cpu.sh"
-source "$ITEM_DIR/weather.sh"
+# source "$ITEM_DIR/weather.sh"
 source "$ITEM_DIR/spaces.sh"
 source "$ITEM_DIR/front_app.sh"
 

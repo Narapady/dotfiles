@@ -28,4 +28,3 @@ tmux:
   options:
     branch_max_len: 0
     hide_clean: true
-

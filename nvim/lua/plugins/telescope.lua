@@ -1,5 +1,4 @@
 return {
-  -- Override default telescope
   {
     "telescope.nvim",
     dependencies = {

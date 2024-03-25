@@ -1,6 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-local colors = require("lua/nord").colors()
+local colors = require("lua/onedark").colors()
 -- This table will hold the configuration.
 local config = {}
 
@@ -11,7 +11,7 @@ if wezterm.config_builder then
 end
 
 -- font
-config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
+config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular", italic = false })
 -- font size
 config.font_size = 15
 -- colorscheme
@@ -35,16 +35,16 @@ config.colors = colors
 -- high window baggVGnr
 config.window_decorations = "RESIZE"
 -- window background opacity
-config.window_background_opacity = 0.75
+config.window_background_opacity = 0.9
 -- window background blur
 config.macos_window_background_blur = 100
 -- no tab bar
 config.enable_tab_bar = false
 -- window padding
 config.window_padding = {
-	left = 10,
+	left = 20,
 	right = 10,
-	top = 5,
+	top = 10,
 	bottom = 10,
 }
 

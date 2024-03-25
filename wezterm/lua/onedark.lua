@@ -1,22 +1,16 @@
--- kanagawa
-local inactive_tab = {
-	bg_color = "#2E3440",
-	fg_color = "#D8DEE9",
-}
-
 local M = {}
 local palette = {
-	base = "#1f1f28", -- #1f1f28
-	overlay = "#1f1f28",
-	muted = "#727169",
-	text = "#dcd7ba",
-	love = "#e82425",
-	gold = "#e6c384",
-	rose = "#ffa066",
-	pine = "#7fb4ca",
-	foam = "#7aa89f",
-	iris = "#957fb8",
-	highlight_high = "#938aa9",
+	base = "#2E3440",
+	overlay = "#2d3343",
+	muted = "#343e4f",
+	text = "#abb2bf",
+	love = "#ef5f6b",
+	gold = "#ebc275",
+	rose = "#d99a5e",
+	pine = "#4dbdcb",
+	foam = "#97ca72",
+	iris = "#ca72e4",
+	highlight_high = "#8f36a9",
 }
 
 local active_tab = {

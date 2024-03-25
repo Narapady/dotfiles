@@ -11,7 +11,7 @@ local function get_diagnostic_label(props)
 end
 
 local function get_git_diff(props)
-  local icons = { removed = " ", changed = " ", added = " " }
+  local icons = { removed = "", changed = "", added = "" }
   local labels = {}
   local success, signs = pcall(vim.api.nvim_buf_get_var, props.buf, "gitsigns_status_dict")
   if success then

@@ -1,27 +1,27 @@
--- kanagawa
-local inactive_tab = {
-	bg_color = "#2E3440",
-	fg_color = "#D8DEE9",
-}
-
 local M = {}
+
 local palette = {
-	base = "#1f1f28", -- #1f1f28
-	overlay = "#1f1f28",
-	muted = "#727169",
-	text = "#dcd7ba",
-	love = "#e82425",
-	gold = "#e6c384",
-	rose = "#ffa066",
-	pine = "#7fb4ca",
-	foam = "#7aa89f",
-	iris = "#957fb8",
-	highlight_high = "#938aa9",
+	base = "#2E3440",
+	overlay = "#002b36",
+	muted = "#3f555c",
+	text = "#839496",
+	love = "#dc342c",
+	gold = "#2ca49c",
+	rose = "#b48c04",
+	pine = "#268BD2",
+	foam = "#849b04",
+	iris = "#D33682",
+	highlight_high = "#524f67",
 }
 
 local active_tab = {
 	bg_color = palette.overlay,
 	fg_color = palette.text,
+}
+
+local inactive_tab = {
+	bg_color = palette.base,
+	fg_color = palette.muted,
 }
 
 function M.colors()
