@@ -7,4 +7,21 @@ vim.opt.scrolloff = 20
 vim.opt.swapfile = false
 
 -- change the color of the floating window
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#2E3440" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#2E3440" })
+vim.opt.termguicolors = true
+vim.g.syntax = "enable"
+vim.o.winblend = 0
+
+-- indent
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+
+-- gutter
+-- vim.opt.number = false
+-- vim.opt.relativenumber = false
+
+vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv") -- Move current line up
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Move current line down

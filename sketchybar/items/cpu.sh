@@ -10,7 +10,7 @@ sketchybar --add item cpu right \
 	label.color="$COLOR" \
 	label.padding_right=10 \
 	background.height=26 \
-	background.padding_right=0 \
+	background.padding_left=0 \
 	background.padding_right=0 \
 	background.color="$BLACK" \
 	background.drawing=on \

@@ -19,8 +19,8 @@ for sid in "${SPACE_SIDS[@]}"; do
 		script="$PLUGIN_DIR/spaces.sh"
 done
 
-sketchybar --add item space_separator left \
-	--set space_separator icon="􀙿" \
+sketchybar --add item space_separator center \
+	--set space_separator icon="" \
 	icon.color="$WHITE" \
 	icon.padding_left=10 \
 	label.font="sketchybar-app-font:Regular:15.0" \

@@ -18,12 +18,12 @@ $git_status\
 $all
 """
 [character]
-success_symbol = ""
-vicmd_symbol = ""
-error_symbol = ""
+success_symbol = "[](fg:#97CA72)"
+vicmd_symbol = "[ ](fg:#97CA72)"
+error_symbol = "[](fg:#ef5f6b)"
 
 [directory]
-diabled = false
+disabled = false
 
 [package]
 disabled = true
@@ -61,3 +61,11 @@ disabled = true
 
 [cmd_duration]
 disabled = false
+
+[python]
+disabled = false
+style = "green bold"
+symbol = "󰌠 "
+
+[lua]
+disabled = true

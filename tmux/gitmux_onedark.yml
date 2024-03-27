@@ -6,12 +6,12 @@ tmux:
     behind: " "
     staged: " "
     conflict: "󰕚 "
-    modified: " "
-    untracked: " "
+    modified: " "
+    untracked: ""
     stashed: " "
     clean: " "
-    insertions: " "
-    deletions: " "
+    insertions: " "
+    deletions: " "
   styles:
     state: "#[fg=#ef5f6b,bold]"
     branch: "#[fg=#ca72e4,bold]"
@@ -21,10 +21,10 @@ tmux:
     conflict: "#[fg=#ef5f6b,bold]"
     modified: "#[fg=#abb2bf,bold]"
     untracked: "#[fg=#4dbdcb,bold]"
-    stashed: "#[fg=#ca72e4,obold]"
+    stashed: "#[fg=#ca72e4,bold]"
     clean: "#[fg=#4dbdcb,bold]"
     divergence: "#[fg=#4dbdcb,bold]"
-  layout: [branch, divergence, flags, stats, " "]
+  layout: [stats, divergence, flags, branch, " "]
   options:
     branch_max_len: 0
     hide_clean: true

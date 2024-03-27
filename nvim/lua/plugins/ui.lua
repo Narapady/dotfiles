@@ -1,15 +1,18 @@
 return {
-  --transparent window
   {
     "xiyaowong/transparent.nvim",
     lazy = false,
     keys = { "<leader>T", "<cmd>TransparentToggle<CR>", desc = "Toggle Transparent" },
   },
-  -- Incremental rename
   {
     "smjonas/inc-rename.nvim",
     cmd = "IncRename",
-    config = true,
+    config = function()
+      require("inc_rename").setup()
+      vim.keymap.set("n", "<leader>rn", function()
+        return ":IncRename " .. vim.fn.expand("<cword>")
+      end, { expr = true, desc = "Incrementally rename current word" })
+    end,
   },
   {
     "folke/noice.nvim",

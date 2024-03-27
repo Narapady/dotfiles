@@ -16,11 +16,13 @@ require("lazy").setup({
     -- load plugins from the extras provided by lazyVim
     { import = "lazyvim.plugins.extras.formatting.black" }, -- formatting
     -- { import = "lazyvim.plugins.extras.dap.core" }, -- debugger
-    -- { import = "lazyvim.plugins.extras.lang.python" }, -- pyright, ruff_lsp
     -- { import = "lazyvim.plugins.extras.test.core" }, -- neotest
+    -- { import = "lazyvim.plugins.extras.lang.python" }, -- pyright, ruff_lsp
     { import = "lazyvim.plugins.extras.coding.yanky" }, -- improve yanky in neovim
     { import = "lazyvim.plugins.extras.coding.codeium" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
+    { import = "lazyvim.plugins.extras.lang.docker" },
+    { import = "lazyvim.plugins.extras.lang.yaml" },
   },
   defaults = {
     lazy = false,

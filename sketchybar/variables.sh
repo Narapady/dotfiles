@@ -11,7 +11,7 @@ CYAN=0xff4dbdcb
 GREEN=0xffA3BE8C
 YELLOW=0xff8c6c3e
 ORANGE=0xffD08770
-RED=0xffef5f6b
+RED=0xffca72e4
 PINK=0xffB48EAD
 BAR_COLOR=0xff00000000
 COMMENT=0xff565f89
@@ -19,8 +19,8 @@ COMMENT=0xff565f89
 TRANSPARENT=0x00000000
 
 # General bar colors
-ICON_COLOR=$WHITE  # Color of all icons
-LABEL_COLOR=$WHITE # Color of all labels
+ICON_COLOR=$CYAN  # Color of all icons
+LABEL_COLOR=$CYAN # Color of all labels
 
 ITEM_DIR="$HOME/.config/sketchybar/items"
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"

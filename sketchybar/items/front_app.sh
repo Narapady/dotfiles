@@ -3,7 +3,7 @@
 COLOR="$CYAN"
 
 sketchybar \
-	--add item front_app left \
+	--add item front_app center \
 	--set front_app script="$PLUGIN_DIR/front_app.sh" \
 	background.height=26 \
 	background.padding_left=0 \
