@@ -87,7 +87,6 @@ recursion:
 # Specifies the format of the size column.
 # Possible values: default, short, bytes
 size: default
-
 # == Permission ==
 # Specify the format of the permission column
 # Possible value: rwx, octal, attributes (windows only), disabled

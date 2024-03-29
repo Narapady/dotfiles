@@ -11,7 +11,7 @@ if wezterm.config_builder then
 end
 
 -- font
-config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular", italic = false })
+config.font = wezterm.font("Hack Nerd Font", { weight = "Regular", italic = false })
 -- font size
 config.font_size = 15
 -- colorscheme

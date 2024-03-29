@@ -25,7 +25,7 @@ LABEL_COLOR=$CYAN # Color of all labels
 ITEM_DIR="$HOME/.config/sketchybar/items"
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 
-FONT="JetBrainsMono Nerd Font"
+FONT="Hack Nerd Font"
 
 PADDINGS=3
 

@@ -8,8 +8,8 @@ local palette = {
 	gold = "#ebc275",
 	rose = "#d99a5e",
 	pine = "#4dbdcb",
-	foam = "#97ca72",
-	iris = "#ca72e4",
+	foam = "#ca72e4",
+	iris = "#97ca72",
 	highlight_high = "#8f36a9",
 }
 

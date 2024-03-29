@@ -23,6 +23,7 @@ vicmd_symbol = "[ ](fg:#97CA72)"
 error_symbol = "[](fg:#ef5f6b)"
 
 [directory]
+style = "fg:#d99a5e"
 disabled = false
 
 [package]
@@ -42,7 +43,8 @@ disabled = true
 
 [git_branch]
 disabled = false
-symbol = " "
+style = "#ca72e4"
+symbol = " "
 
 [git_commit]
 disabled = true
@@ -64,7 +66,7 @@ disabled = false
 
 [python]
 disabled = false
-style = "green bold"
+style = "green"
 symbol = "󰌠 "
 
 [lua]

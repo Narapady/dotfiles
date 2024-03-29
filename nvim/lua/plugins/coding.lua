@@ -56,10 +56,6 @@ return {
     end,
   },
   {
-    "imsnif/kdl.vim",
-    ft = "kdl",
-  },
-  {
     "christoomey/vim-tmux-navigator",
     cmd = {
       "TmuxNavigateLeft",

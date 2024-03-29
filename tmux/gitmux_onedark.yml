@@ -1,6 +1,6 @@
 tmux:
   symbols:
-    branch: " "
+    branch: " "
     hashprefix: ":"
     ahead: " "
     behind: " "
@@ -13,17 +13,17 @@ tmux:
     insertions: " "
     deletions: " "
   styles:
-    state: "#[fg=#ef5f6b,bold]"
-    branch: "#[fg=#ca72e4,bold]"
-    staged: "#[fg=#d99a5e,bold]"
-    insertions: "#[fg=#97ca72,bold]"
-    deletions: "#[fg=#ef5f6b,bold]"
-    conflict: "#[fg=#ef5f6b,bold]"
-    modified: "#[fg=#abb2bf,bold]"
-    untracked: "#[fg=#4dbdcb,bold]"
-    stashed: "#[fg=#ca72e4,bold]"
-    clean: "#[fg=#4dbdcb,bold]"
-    divergence: "#[fg=#4dbdcb,bold]"
+    state: "#[fg=#ef5f6b,nobold]"
+    branch: "#[fg=#ca72e4,nobold]"
+    staged: "#[fg=#d99a5e,nobold]"
+    insertions: "#[fg=#97ca72,nobold]"
+    deletions: "#[fg=#ef5f6b,nobold]"
+    conflict: "#[fg=#ef5f6b,nobold]"
+    modified: "#[fg=#abb2bf,nobold]"
+    untracked: "#[fg=#4dbdcb,nobold]"
+    stashed: "#[fg=#ca72e4,nobold]"
+    clean: "#[fg=#4dbdcb,nobold]"
+    divergence: "#[fg=#4dbdcb,nobold]"
   layout: [stats, divergence, flags, branch, " "]
   options:
     branch_max_len: 0
