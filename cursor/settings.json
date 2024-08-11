@@ -1,0 +1,268 @@
+{
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 600, // Delay in milliseconds (1000ms = 1 second)
+  "notebook.output.fontFamily": "Input Mono",
+  "notebook.markup.fontSize": 15,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.compactView": true,
+  "editor.inlayHints.fontFamily": "Input Mono",
+  "errorLens.fontFamily": "Input Mono",
+  "errorLens.fontStyleItalic": true,
+  "errorLens.messageBackgroundMode": "message",
+  "errorLens.enabled": true,
+  "workbench.statusBar.visible": true,
+  // project manager
+  // apc
+  "window.titleBarStyle": "native",
+  "apc.electron": {
+    "titleBarStyle": "customButtonsOnHover",
+    "frame": false,
+    "opacity": 0.95,
+    "transparent": true,
+    "vibrancy": "ultra-dark",
+    "visualEffectState": "active"
+  },
+  "apc.font.family": "Input Mono",
+  "apc.parts.font.family": {
+    "sidebar": "Input Mono",
+    "titlebar": "Input Mono",
+    "activityBar": "Input Mono",
+    "panel": "Input Mono",
+    "tabs": "Input Mono",
+    "statusbar": "Input Mono",
+    "settings-body": "Input Mono",
+    "extension-editor": "Input Mono", // Required: Expected font installation on machine and Application restart
+    "monaco-menu": "Input Mono"
+  },
+  "apc.statusBar": {
+    "fontSize": 12,
+    "position": "bottom",
+    "itemSize": 30
+  },
+  "apc.listRow": {
+    "lists": [
+      "quick-input-list",
+      "results"
+    ],
+    "height": 30
+  },
+  // python
+  "python.interpreter.infoVisibility": "always",
+  "python.testing.pytestEnabled": true,
+  "python.testing.cwd": "${workspaceFolder}",
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+  "python.languageServer": "Default",
+  // "[python]": {
+  //   "editor.formatOnSave": true,
+  //   "editor.defaultFormatter": "ms-python.black-formatter",
+  //   // "editor.codeActionsOnSave": {
+  //   //   "source.organizeImports": "explicit"
+  //   // },
+  // },
+  // "[jupyter]": {
+  //   "editor.defaultFormatter": "ms-python.black-formatter"
+  // },
+  "files.associations": {
+    "*.bqsql": "sql",
+    "*.sql": "jinja-sql",
+    "*.ipynb": "python"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "find-it-faster.general.useTerminalInEditor": true,
+  "find-it-faster.advanced.disableStartupChecks": true,
+  "find-it-faster.findWithinFiles.previewWindowConfig": "right:55%:wrap",
+  "find-it-faster.findWithinFiles.previewCommand": "bat --style=numbers --color=always --line-range=:100 {1}  --highlight-line {2}",
+  "find-it-faster.general.searchCurrentWorkingDirectory": "never",
+  "find-it-faster.general.clearTerminalAfterUse": false,
+  "find-it-faster.findWithinFiles.fuzzRipgrepQuery": true,
+  "find-it-faster.general.killTerminalAfterUse": true,
+  // Editor Setting
+  "editor.suggestSelection": "first",
+  "editor.fontFamily": "Input Mono",
+  "editor.fontWeight": "300",
+  "editor.fontLigatures": true,
+  "editor.glyphMargin": true, // make width of number line small
+  "editor.minimap.enabled": false,
+  "editor.formatOnSaveMode": "file",
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingBrackets": "always",
+  "editor.padding.top": 0,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.lineHeight": 1.5,
+  "editor.scrollbar.verticalScrollbarSize": 12,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontSize": 15,
+  "editor.minimap.renderCharacters": false,
+  "editor.scrollBeyondLastLine": false,
+  "editor.renderWhitespace": "none",
+  "editor.minimap.size": "fill",
+  "editor.rulers": [],
+  "editor.lineNumbers": "relative",
+  "editor.tabCompletion": "on",
+  "editor.cursorBlinking": "expand",
+  "editor.cursorWidth": 3,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "ˆ": true
+  },
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.ignoreRecommendations": true,
+  // Terminal Setting
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontWeight": "400",
+  "terminal.integrated.smoothScrolling": true,
+  // Work bench
+  "workbench.tree.indent": 20,
+  "workbench.settings.editor": "json",
+  "workbench.editor.closeEmptyGroups": false,
+  "workbench.list.smoothScrolling": true,
+  "workbench.layoutControl.enabled": false,
+  "workbench.colorCustomizations": {
+    "foreground": "#839496"
+  },
+  "search.useGlobalIgnoreFiles": true,
+  "search.exclude": {
+    "**/node_modules": false,
+    "node_modules": true,
+    "yarn.lock": true
+  },
+  // Vim
+  "vim.smartRelativeLine": true,
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    },
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "]",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.nextInFiles"
+      ]
+    },
+    {
+      "before": [
+        "d",
+        ">"
+      ],
+      "after": [
+        "d",
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "c",
+        ">"
+      ],
+      "after": [
+        "c",
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "d",
+        "<"
+      ],
+      "after": [
+        "d",
+        "0"
+      ]
+    },
+    {
+      "before": [
+        "c",
+        "<"
+      ],
+      "after": [
+        "c",
+        "0"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    {
+      "before": [
+        ">"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+  ],
+  "explorer.confirmDragAndDrop": false,
+  "workbench.editor.showTabs": "single",
+  "editor.smoothScrolling": true,
+  "window.autoDetectColorScheme": true,
+  "window.autoDetectHighContrast": false,
+  "window.commandCenter": false,
+  "python.createEnvironment.contentButton": "hide",
+  "git.openRepositoryInParentFolders": "never",
+  "update.mode": "manual",
+  "notebook.formatOnCellExecution": true,
+  "notebook.cellToolbarVisibility": "hover",
+  "workbench.activityBar.orientation": "vertical",
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.completeFunctionParens": true,
+  "workbench.colorTheme": "Solarized Custom Dark",
+  "cursor.cpp.disabledLanguages": [
+    "plaintext",
+    "markdown",
+    "scminput",
+    "vso",
+    "python"
+  ],
+  "symbols.hidesExplorerArrows": false,
+  "workbench.iconTheme": "symbols",
+  "workbench.preferredDarkColorTheme": "Tokyo Night Moon",
+  "workbench.activityBar.location": "hidden",
+}
