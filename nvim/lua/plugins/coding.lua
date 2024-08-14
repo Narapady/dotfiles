@@ -19,12 +19,12 @@ return {
           },
         },
         chat_conceal_model_params = true,
-        vim.keymap.set("n", "<leader>al", "<cmd>GpChatToggle popup<CR>", { silent = true, desc = "Chat Toggle" }),
-        vim.keymap.set("n", "<leader>ar", "<cmd>GpChatRespond<CR>", { silent = true, desc = "Chat Response" }),
-        vim.keymap.set("n", "<leader>as", "<cmd>GpChatStop<CR>", { silent = true, desc = "Chat Stop" }),
-        vim.keymap.set("n", "<leader>ad", "<cmd>GpChatDelete<CR>", { silent = true, desc = "Chat Delete" }),
-        vim.keymap.set("n", "<leader>an", "<cmd>GpChatNew popup<CR>", { silent = true, desc = "Chat New" }),
-        vim.keymap.set({ "n", "v", "i", "x" }, "<leader>ap", ":'<,'>GpChatPaste popup<CR>",
+        vim.keymap.set("n", "<leader><leader>", "<cmd>GpChatToggle popup<CR>", { silent = true, desc = "Chat Toggle" }),
+        vim.keymap.set("n", "<leader><leader>r", "<cmd>GpChatRespond<CR>", { silent = true, desc = "Chat Response" }),
+        vim.keymap.set("n", "<leader><leader>s", "<cmd>GpChatStop<CR>", { silent = true, desc = "Chat Stop" }),
+        vim.keymap.set("n", "<leader><leader>d", "<cmd>GpChatDelete<CR>", { silent = true, desc = "Chat Delete" }),
+        vim.keymap.set("n", "<leader><leader>n", "<cmd>GpChatNew popup<CR>", { silent = true, desc = "Chat New" }),
+        vim.keymap.set({ "n", "v", "i", "x" }, "<leader><leader>p", ":'<,'>GpChatPaste popup<CR>",
           { silent = true, desc = "Chat Paste" })
       }
       require("gp").setup(conf)

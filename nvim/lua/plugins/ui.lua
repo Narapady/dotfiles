@@ -1,5 +1,10 @@
 return {
   {
+    "christopher-francisco/tmux-status.nvim",
+    lazy = true,
+    opts = {},
+  },
+  {
     "xiyaowong/transparent.nvim",
     lazy = false,
     keys = { "<leader>T", "<cmd>TransparentToggle<CR>", desc = "Toggle Transparent" },

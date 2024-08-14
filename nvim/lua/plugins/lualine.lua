@@ -8,7 +8,9 @@ return {
       options = {
         icons_enabled = true,
         theme = {
-          normal = { c = { fg = "#00000000", bg = "#00000000" } },
+          normal = {
+            c = { fg = "#00000000", bg = "#00000000" },
+          },
         },
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
@@ -56,11 +58,25 @@ return {
           -- { "location", color = { fg = "#e0af68", gui = "bold" }, separator = "", padding = { left = 1, right = 0 } },
           -- { "progress", color = { fg = "#e0af68" }, separator = "", padding = { left = 1, right = 0 } },
         },
-        lualine_b = {},
+        lualine_b = {
+        },
         lualine_c = {},
         lualine_x = {},
         lualine_y = {},
         lualine_a = {
+          {
+            require('tmux-status').tmux_session,
+            cond = require('tmux-status').show,
+            padding = { left = 3 },
+          },
+          {
+            require('tmux-status').tmux_windows,
+            cond = require('tmux-status').show,
+            padding = { left = 3 },
+          },
+          -- { "mode",     color = { fg = "#a8be81" }, separator = "", padding = { left = 1, right = 0 } },
+          { "location", color = { fg = "#ff9b5e" }, separator = "", padding = { left = 1, right = 0 } },
+          { "progress", color = { fg = "#ff657a" }, separator = "", padding = { left = 1, right = 0 } },
           -- {
           --   function()
           --     local breadcrum = require("lspsaga.symbol.winbar").get_bar()
