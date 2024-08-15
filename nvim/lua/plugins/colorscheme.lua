@@ -1,7 +1,7 @@
 local base = {
-  red = "#ff657a",
   maroon = "#F29BA7",
   peach = "#ff9b5e",
+  red = "#ff657a",
   yellow = "#eccc81",
   green = "#a8be81",
   teal = "#9cd1bb",
@@ -102,7 +102,7 @@ return {
           dark = "frappe",
           light = "latte",
         },
-        transparent_background = true,
+        transparent_background = false,
         color_overrides = {
           latte = extend_base({
             text = "#202027",
