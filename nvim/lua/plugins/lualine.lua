@@ -23,8 +23,10 @@ return {
     local opts = {
       options = {
         theme = "auto",
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
         globalstatus = vim.o.laststatus == 3,
-        disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter" } },
+        disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter", "neo-tree" } },
       },
       sections = {
         lualine_a = { "mode" },
@@ -46,7 +48,18 @@ return {
             }
           },
         },
-        lualine_c = {},
+        lualine_c = {
+          -- {
+          --   require('tmux-status').tmux_session,
+          --   cond = require('tmux-status').show,
+          --   padding = { left = 2, right = 2 },
+          -- },
+          -- {
+          --   require('tmux-status').tmux_windows,
+          --   cond = require('tmux-status').show,
+          --   padding = { left = 2, right = 2 },
+          -- },
+        },
         lualine_x = {
           {
             "diagnostics",
@@ -57,8 +70,6 @@ return {
               hint = icons.diagnostics.Hint,
             },
           },
-        },
-        lualine_y = {
           {
             "diff",
             symbols = {
@@ -78,8 +89,11 @@ return {
             end,
           },
         },
+        lualine_y = {
+          { "location" },
+        },
         lualine_z = {
-          { "branch", icon = '󰘬' },
+          "progress",
         },
       },
       extensions = { "neo-tree", "lazy" },

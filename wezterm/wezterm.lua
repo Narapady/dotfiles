@@ -1,7 +1,7 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 local wt_action = require("wezterm").action
-local colors = require("lua/tokyonight").colors()
+local colors = require("lua/cyberdream").colors()
 local k = require("utils.keys")
 
 -- This table will hold the configuration.
@@ -20,7 +20,8 @@ config.font_size = 15
 config.line_height = 1.2
 -- colorscheme
 -- config.colors = colors
-config.color_scheme = 'Catppuccin Mocha (Gogh)'
+config.color_scheme = 'Tokyo Night Moon'
+
 
 -- config.background = {
 --   {
@@ -56,15 +57,15 @@ config.keys = {
 -- high window baggVGnr
 config.window_decorations = "RESIZE"
 -- window background opacity
-config.window_background_opacity = 0.7
+config.window_background_opacity = 0.8
 -- window background blur
 config.macos_window_background_blur = 100
 -- no tab bar
 config.enable_tab_bar = false
 -- window padding
 config.window_padding = {
-  left = 20,
-  right = 20,
+  left = 15,
+  right = 10,
   top = 5,
   bottom = 0,
 }

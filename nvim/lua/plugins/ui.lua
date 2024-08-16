@@ -1,5 +1,39 @@
 return {
   {
+    "christopher-francisco/tmux-status.nvim",
+    lazy = false,
+    enabled = false,
+    opts = {
+      window = {
+        separator = "  ",
+        icon_zoom = "",
+        icon_mark = "",
+        icon_bell = "",
+        icon_mute = "",
+        icon_activity = "",
+        text = "dir",
+      },
+      session = {
+        icon = " "
+      },
+      datetime = {
+        icon = "󱑍",
+        format = "%a %d %b %k:%m",
+      },
+      battery = {
+        icon = "󰂎",
+      },
+      colors = {
+        window_active = "#EA7A95",
+        window_inactive = "#87A35E",
+        window_inactive_recent = "#87A35E",
+        session = "#FF8459",
+      },
+      force_show = false, -- Force components to be shown regardless of Tmux status
+      manage_tmux_status = true,
+    },
+  },
+  {
     "xiyaowong/transparent.nvim",
     lazy = false,
     keys = { "<leader>T", "<cmd>TransparentToggle<CR>", desc = "Toggle Transparent" },

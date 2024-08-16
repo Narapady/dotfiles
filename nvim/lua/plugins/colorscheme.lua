@@ -63,7 +63,7 @@ return {
     priority = 1000,
     config = function()
       require("cyberdream").setup({
-        transparent = true,
+        transparent = false,
 
         -- Enable italics comments
         italic_comments = false,
@@ -102,7 +102,7 @@ return {
           dark = "frappe",
           light = "latte",
         },
-        transparent_background = false,
+        transparent_background = true,
         color_overrides = {
           latte = extend_base({
             text = "#202027",
@@ -195,7 +195,7 @@ return {
           italic = false,
           transparency = true,
         },
-        dark_variant = "main",
+        dark_variant = "dawn",
       })
     end,
   },
@@ -246,9 +246,14 @@ return {
     end,
   },
   {
+    "sainnhe/gruvbox-material",
+    lazy = true,
+    priority = 1000,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "tokyonight",
     },
   },
 }
