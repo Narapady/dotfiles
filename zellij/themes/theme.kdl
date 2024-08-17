@@ -1,0 +1,15 @@
+themes {
+  solarized {
+      fg "#839496"
+      bg "#00151A"
+      black "#002D38"
+      red "#dc342c"
+      green "#849b04"
+      yellow "#b48c04"
+      blue "#268BD2"
+      magenta "#D33682"
+      cyan "#2ca49c"
+      white "#839496"
+      orange "#b48c04"
+  }
+}

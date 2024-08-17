@@ -32,7 +32,7 @@ disabled = true
 disabled = true
 
 [aws]
-disabled = true
+disabled = false
 symbol = "  "
 
 [docker_context]

@@ -1,7 +1,7 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 local wt_action = require("wezterm").action
-local colors = require("lua/cyberdream").colors()
+local colors = require("lua/solarized").colors()
 local k = require("utils.keys")
 
 -- This table will hold the configuration.
@@ -19,8 +19,9 @@ config.font = wezterm.font("InputMono Nerd Font", { weight = "Regular", italic =
 config.font_size = 15
 config.line_height = 1.2
 -- colorscheme
--- config.colors = colors
-config.color_scheme = 'Tokyo Night Moon'
+config.colors = colors
+-- config.color_scheme = 'Tokyo Night Moon'
+-- config.color_scheme = 'Solarized Dark Higher Contrast'
 
 
 -- config.background = {
@@ -64,9 +65,9 @@ config.macos_window_background_blur = 100
 config.enable_tab_bar = false
 -- window padding
 config.window_padding = {
-  left = 15,
-  right = 10,
-  top = 5,
+  left = 5,
+  right = 0,
+  top = 0,
   bottom = 0,
 }
 
