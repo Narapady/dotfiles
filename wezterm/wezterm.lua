@@ -19,22 +19,20 @@ config.font = wezterm.font("InputMono Nerd Font", { weight = "Regular", italic =
 config.font_size = 15
 config.line_height = 1.2
 -- colorscheme
-config.colors = colors
--- config.color_scheme = 'Tokyo Night Moon'
--- config.color_scheme = 'Solarized Dark Higher Contrast'
-
+-- config.colors = colors
+config.color_scheme = 'Tokyo Night'
 
 -- config.background = {
 --   {
 --     source = {
 --       File = {
---         path = "/Users/narapadychhuoy/Downloads/Sunset Kanagawa Dragon.jpg",
+--         path = "/Users/narapadychhuoy/Downloads/Facebook photo.jpg",
 --         speed = 0.2,
 --       },
 --     },
---     hsb = { brightness = 0.05 },
+--     hsb = { brightness = 0.01 },
 --     vertical_align = "Middle",
---     opacity = 0.9,
+--     opacity = 1,
 --     height = "Cover",
 --     width = "Cover",
 --   },

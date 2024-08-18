@@ -80,10 +80,10 @@ return {
     return {
       { ";f", "<cmd>Telescope find_files<cr>",                desc = "Find Files" },
       { ";b", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fine in Current Buffer" },
-      { ";;", "<cmd>Telescope buffers<cr>",                   desc = "Opened Buffers" },
+      { ";;", "<cmd>Telescope lsp_document_symbols<cr>",      desc = "Buffer Symbols" },
       { ";r", "<cmd>Telescope live_grep<cr>",                 desc = "Live Grep" },
       { ";s", "<cmd>Telescope grep_string<cr>",               desc = "Search Sting under Cursor" },
-      { ";d", "<cmd>Telescope diagnostics<cr>",               desc = "Diagnostics" },
+      { ";x", "<cmd>Telescope diagnostics<cr>",               desc = "Diagnostics" },
     }
   end,
 }

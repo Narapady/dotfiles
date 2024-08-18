@@ -1,5 +1,15 @@
 return {
   {
+    "dinhhuy258/git.nvim",
+    event = "BufReadPre",
+    opts = {
+      keymaps = {
+        -- Open blame window
+        blame = "<Leader>gb",
+      },
+    },
+  },
+  {
     "lewis6991/gitsigns.nvim",
     event = "LazyFile",
     opts = {
@@ -30,8 +40,7 @@ return {
       file_panel = {
         win_config = {
           position = "bottom",
-          height = 20,
-
+          height = 10,
         }
       },
       hooks = {
@@ -62,8 +71,8 @@ return {
       },
     },
     keys = {
-      { "<leader>gd", "<cmd>DiffviewOpen<cr>",        desc = "Diff View Open" },
-      { "<leader>gD", "<cmd>DiffviewClose<cr>",       desc = "Diff View Close" },
+      { ";d",         "<cmd>DiffviewOpen<cr>",        desc = "Diff View Open" },
+      { "q",          "<cmd>DiffviewClose<cr>",       desc = "Diff View Close" },
       { "<leader>gh", "<cmd>DiffviewFileHistory<cr>", desc = "Diff View File History" },
     },
   },

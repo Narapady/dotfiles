@@ -1,4 +1,18 @@
 themes {
+  tokyonight {
+    fg "#c0caf5"
+    bg "#1E2336"
+    black "#111111"
+    red "#ff757f"
+    green "#C3E88D"
+    yellow "#e0af68"
+    blue "#0db9d7"
+    magenta "#bb9af7"
+    cyan "#5fd6be"
+    white "#c0caf5"
+    orange "#ff9e64"
+  }
+
   solarized {
       fg "#839496"
       bg "#00151A"
@@ -12,4 +26,5 @@ themes {
       white "#839496"
       orange "#b48c04"
   }
+
 }

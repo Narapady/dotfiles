@@ -1,6 +1,7 @@
 return {
   -- { "akinsho/bufferline.nvim",          enabled = false },
   { "SmiteshP/nvim-navic",              enabled = false },
+  { "folke/noice.nvim",                 enabled = false },
   { "linux-cultist/venv-selector.nvim", enabled = false },
   { "stevearc/conform.nvim",            enabled = false },
   {
